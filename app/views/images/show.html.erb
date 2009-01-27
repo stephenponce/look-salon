@@ -1,0 +1,12 @@
+<p>
+ <% if @image %>
+   <%= link_to image_tag(@image.public_filename(:thumb)), @image.public_filename %>
+ <% else %>
+   missing image
+ <% end %>
+
+<!--  <%= image_tag (@image.public_filename(:thumb) ) %>  -->
+</p>
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>

@@ -1,0 +1,24 @@
+<h1>Listing stylists</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Image</th>
+    <th>Message</th>
+  </tr>
+
+<% for stylist in @stylists %>
+  <tr>
+    <td><%=h stylist.name %></td>
+    <td><%=h stylist.image_id %></td>
+    <td><%=h stylist.message %></td>
+    <td><%= link_to 'Show', stylist %></td>
+    <td><%= link_to 'Edit', edit_stylist_path(stylist) %></td>
+    <td><%= link_to 'Destroy', stylist, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New stylist', new_stylist_path %>

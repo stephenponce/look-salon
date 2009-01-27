@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: Stylist Name1
+  image_id: 1
+  message: Here is my message
+
+two:
+  name: stylist name2
+  image_id: 2
+  message: Hereisanothermessage

@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Admin Panel: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+  <%= javascript_include_tag :defaults %>
+  <%= active_scaffold_includes %>
+  <%= stylesheet_link_tag 'reset' %>
+  <%= stylesheet_link_tag 'main' %>
+</head>
+<body>
+  <p style="color: green"><%= flash[:notice] %></p>
+
+  <% if logged_in? %>
+    <div id='account_panel'>
+      <%= link_to 'Log Out', :controller=>'account', :action=>'logout' %>
+      <br />
+      Logged in as: <%=h current_user.login %> 
+    </div>
+  <% end %>
+
+  <div id='header'>
+    <h1> <%=link_to ('The Look Salon', url_for('/') ) %> </h1>
+    <div id ='topNav'>
+        <ul id='navigation'>
+            <li> <br /> </li>
+
+         </ul>
+    </div>
+  </div>
+  <div id='wrapper'>
+    <%= yield  %>
+    <div style='clear:both;'></div>
+    
+    <div id='footer'>
+      <div id='general_info'>
+        The Look Salon 12613 Nicollet Ave Burnsville, MN 55337 <br />
+        Call us at: 952.746.7777
+      </div>
+      <div id='legal_notes'>
+        Copyright © 2009 Look Salon. All Rights Reserved. 
+      </div>
+    </div>
+    
+  </div>
+
+</body>
+</html>

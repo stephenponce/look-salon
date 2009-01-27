@@ -1,0 +1,27 @@
+<div id='center'>
+  <div class='boxed'>
+    <h3 class='heading'>  <%=h @tag.name %> </h3>
+    <p>
+    <table class='service-wrapper'>
+      <tr>
+        <th>
+          Service
+        </th>
+        <th>
+          Price Range
+        </th>
+      </tr>
+    <% for service in @tag.services %>
+      <tr>
+        <td>
+          <%=h service.title %> 
+        </td>
+        <td>
+          <%=h service.price_range %>
+        </td>
+      </tr>
+    <% end %>
+    </table>
+    </p>
+  </div>
+</div>   

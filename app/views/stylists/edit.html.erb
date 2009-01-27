@@ -1,0 +1,24 @@
+<h1>Editing stylist</h1>
+
+<% form_for(@stylist) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :image_id %><br />
+    <%= f.text_field :image_id %>
+  </p>
+  <p>
+    <%= f.label :message %><br />
+    <%= f.text_field :message %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @stylist %> |
+<%= link_to 'Back', stylists_path %>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Look Salon: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'reset' %>
+  <%= stylesheet_link_tag 'main' %>
+  <%= stylesheet_link_tag 'services' %>
+</head>
+<body>
+  <p style="color: green"><%= flash[:notice] %></p>
+
+  <div id='header'>
+    <h1> <%=link_to ('The Look Salon', url_for('/') ) %> </h1>
+    <div id ='topNav'>
+        <ul id='navigation'>
+          <% if controller.controller_name=='info' && controller.action_name == 'index' %>
+            <li id='current'> <%= link_to 'Home', :controller=>'info', :action=>'index' %> </li>
+          <% else %>
+            <li> <%= link_to 'Home', :controller=>'info', :action=>'index' %> </li>
+          <% end %>
+
+          <% if controller.action_name == 'about' %>
+            <li id='current'> <%= link_to 'About Us', :controller=>'info', :action=>'about' %> </li>
+          <% else %>
+            <li> <%= link_to 'About Us', :controller=>'info', :action=>'about' %> </li>
+          <% end %>
+
+          <% if controller.action_name == 'service' %>
+            <li id='current'> <%= link_to 'Services', :controller=>'info', :action=>'services' %> </li>
+          <% else %>
+            <li> <%= link_to 'Services', :controller=>'info', :action=>'services' %> </li>
+          <% end %>
+          <% if controller.action_name == 'contact' %>
+            <li id='current'> <%= link_to 'Contact', :controller=>'info', :action=>'contact' %></li>
+          <% else %>
+            <li> <%= link_to 'Contact', :controller=>'info', :action=>'contact' %></li>
+          <% end %>
+         </ul>
+    </div>
+  </div>
+  <div id='wrapper'>
+    <%= yield  %>
+    <div style='clear:both;'></div>
+    
+    <div id='footer'>
+      <div id='general_info'>
+        The Look Salon 12613 Nicollet Ave Burnsville, MN 55337 <br />
+        Call us at: 952.746.7777
+      </div>
+      <div id='legal_notes'>
+        Copyright © 2009 Look Salon. All Rights Reserved. 
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>

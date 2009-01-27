@@ -1,0 +1,14 @@
+<h1>New image</h1>
+
+<% form_for(:image, :url=> images_path, :html=> {:multipart => true}) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    Upload your Image <br />
+    <%= f.file_field :uploaded_data %>
+  </p>
+  <p>
+    <%= f.submit "Add Image to gallery" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', images_path %>

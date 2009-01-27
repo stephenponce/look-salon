@@ -1,0 +1,12 @@
+<div class='boxed'>
+  <h2 class='heading'> Salon Menu </h1>
+  <!-- put tag info here -->
+  <ul>
+    <% for tag in tags %>
+      <li>
+        <%=link_to tag.name, url_for(tag) %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
