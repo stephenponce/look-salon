@@ -8,7 +8,17 @@
 <% for image in @images %>
   <tr>
     <td> 
+      <%= link_to (image.location, :controller=>'info', :action=>image.location) %> <br />
+    </td>
+
+    <td> 
       <%= link_to (image_tag(image.public_filename(:thumb)), image.public_filename, :target=>:blank) %> <br />
+    </td>
+    <td>
+      <%= link_to ('Edit', :action=>'edit', :id=> image ) %>
+    </td>
+    <td>
+      <%= link_to ('Delete Image', image, :confirm=>"Are you sure?", :method => :delete ) %> 
     </td>
   </tr>
 <% end %>

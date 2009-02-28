@@ -1,13 +1,18 @@
-<div class='boxed'>
-  <h2 class='heading'>  </h1>
-  <ul>
-    <li>
-      <%= link_to('Our Philosophy', :action=>'philosphy') %>
-    </li>
+
+  <h2 class='heading'> About <span class='second_word'>Us </span></h2>
+  <ul class='second_nav'>
+    <% if controller.action_name=='about' && controller.controller_name=='info' %>
+      <li id='current'>
+        <%= link_to('Our Philosophy', :action=>'about') %>
+      </li>
+    <% else %>
+      <li>
+        <%= link_to 'Philosophy', :action=>'about' %>
+      </li>
+    <% end %>
     <li>
       <%= link_to('Our People', :controller=>'people', :action=>'') %>
     </li>
 
   </ul>
-</div>
 

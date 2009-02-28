@@ -1,0 +1,31 @@
+<!--RENDERS SERVICE TAGS -->
+<%= render :partial=>'service', :locals=>{:tags => @tags} %>
+
+
+<table class='service-wrapper'>
+  <tr>
+    <th>
+      Service
+    </th>
+    <th>
+      Price Range
+    </th>
+  </tr>
+  <% for service in @tag.services %>
+    <tr>
+      <td>
+        <%=h service.title %>
+      </td>
+      <td>
+        <%=h service.price_range %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<div class='service_footer'>
+  <p>
+    *Prices do not include gratuity.
+  </p>
+</div>
+

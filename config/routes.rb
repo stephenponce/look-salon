@@ -1,13 +1,16 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :posts
 
   map.connect 'admin/', :controller=>'admin', :action=>'panel'
   map.connect 'admin/index', :controller=>'admin', :action=>'panel'
   map.connect 'admin/panel', :controller=>'admin', :action=>'panel'
 
-  map.resources :tags
+  map.connect 'info/home', :controller=>'info', :action=>'index'
 
-  map.resources :services
+  map.resources :tags, :active_scaffold => true
+
+  map.resources :services, :active_scaffold => true
+
+  map.resources :posts, :active_scaffold => true
 
   map.resources :images
 

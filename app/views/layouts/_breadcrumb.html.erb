@@ -1,0 +1,12 @@
+<% if controller.action_name == 'index' && controller.controller_name == 'info' %>
+  home
+<% elsif controller.action_name=='about' && controller.controller_name == 'info' %>
+  about
+<% elsif controller.action_name=='services' && controller.controller_name == 'info' %>
+  services
+<% elsif controller.action_name=='show_service' && controller.controller_name == 'info' %>
+  <%= @tag.name %>
+<% elsif controller.action_name=='contact' && controller.controller_name=='info' %>
+  contact
+<% end %>
+

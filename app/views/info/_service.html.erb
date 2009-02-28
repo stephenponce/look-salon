@@ -1,12 +1,18 @@
 <div class='boxed'>
-  <h2 class='heading'> Salon Menu </h1>
+  <h2 class='heading'> Services <span class='second_word'> List</span></h2>
   <!-- put tag info here -->
-  <ul>
+  <ul class='second_nav' id='long_menu'>
     <% for tag in tags %>
       <li>
-        <%=link_to tag.name, url_for(tag) %>
+        <%=link_to tag.name, :action=>'show_service', :id=>tag %>
       </li>
     <% end %>
+      <li>
+        <%=link_to 'Packages', :controller=>'info', :action=>'services' %>
+      </li>
   </ul>
+
+  <!--just a sample of random services go here -->
+
 </div>
 

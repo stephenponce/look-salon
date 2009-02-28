@@ -1,7 +1,13 @@
 class ServicesController < ApplicationController
   layout 'admin'
 
-  active_scaffold :service 
+  active_scaffold :service do |config|
+    config.columns.exclude :description
+    config.columns = [:title, :price_range, :tag]
+    list.sorting = {:tag => 'ASC'}
+  end
+
+
 end
 class OldServicesController
   # GET /services

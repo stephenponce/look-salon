@@ -1,0 +1,8 @@
+<% image = Image.random %>
+
+<% while image.nil? || !image.parent_id.nil? %> 
+  <%  image = Image.random  %>
+<% end %>
+
+    <%= image_tag image.public_filename %>
+

@@ -1,12 +1,12 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  title: MyString
-  description: MyString
-  price: 1.5
+  title: myService1
+  description: 
+  price_range: $15-40+
   tag_id: 1
 two:
-  title: MyString
-  description: MyString
-  price: 1.5
+  title: HairStyle
+  description: 
+  price_range: $40-80+
   tag_id: 2

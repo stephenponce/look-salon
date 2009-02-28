@@ -1,0 +1,31 @@
+
+<ul id='menu'>
+<!-- INDEX -->
+    <% if controller.controller_name=='info' && action_name == 'index' %>
+      <li id='nav_home' > <%= link_to image_tag("nav/home_on.jpg")	, :controller=>"info", :action=>"index", :onclick=>:slide_image %></li>
+    <% else %>
+      <li id='nav_home' > <%= link_to image_tag("nav/home_off.jpg", :onmouseover=>"this.src='/images/nav/home_on.jpg'", :onmouseout=>"this.src='/images/nav/home_off.jpg'"  ), :controller=>"info", :action=>"index" %></li>
+    <% end %>
+<!-- ABOUT -->
+    <% if action_name == 'about' %>
+      <li id='nav_about' > <%= link_to image_tag("nav/about_on.jpg"), :controller=>'info', :action=>'about' %> </li>
+    <% else %>
+      <li id='nav_about' > <%= link_to image_tag("nav/about_off.jpg", :onmouseover=>"this.src='/images/nav/about_on.jpg'", :onmouseout=>"this.src='/images/nav/about_off.jpg'"  ), :controller=>'info', :action=>'about' %> </li>
+    <% end %>
+ 
+<!-- SERVICES -->
+    <% if action_name == 'services' || action_name == 'show_service' %>
+
+	  <li id='nav_service' > <%= link_to image_tag("nav/service_on.jpg"),:controller=>'info', :action=>'services' %> </li>
+    <% else %>
+	  <li id='nav_service' > <%= link_to image_tag("nav/service_off.jpg", :onmouseover=>"this.src='/images/nav/service_on.jpg'", :onmouseout=>"this.src='/images/nav/service_off.jpg'"  ), :controller=>'info', :action=>'services' %> </li>
+    <% end %>
+
+<!-- CONTACT -->
+    <% if action_name == 'contact' %>
+	  <li id='nav_contact' > <%= link_to image_tag("nav/contact_on.jpg"), :controller=>'info', :action=>'contact' %> </li>
+    <% else %>
+	  <li id='nav_contact' > <%= link_to image_tag("nav/contact_off.jpg", :onmouseover=>"this.src='/images/nav/contact_on.jpg'", :onmouseout=>"this.src='/images/nav/contact_off.jpg'"  ), :controller=>'info', :action=>'contact' %> </li>
+    <% end %>
+</ul>
+

@@ -28,11 +28,14 @@
               <li class='current'> <%= link_to 'Panel', :controller=>'admin', :action=>'panel' %> </li>
             <% else %>
               <li> <%= link_to 'Panel', :controller=>'admin', :action=>'panel' %> </li>
-
             <% end %>
             <li> <%= link_to 'Services', :controller=>'services', :action=>'index' %> </li>
 
             <li> <%= link_to 'Tags', :controller=>'tags', :action=>'index' %></li>
+  
+            <li> <%= link_to 'Announcements', :controller=>'posts', :action=>'index' %> </li>
+
+	    <li> <%= link_to 'Stylists', :controller=>'stylists', :action=>'index' %> </li>
          </ul>
     </div>
   </div>

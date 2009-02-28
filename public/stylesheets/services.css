@@ -1,8 +1,38 @@
+ul#service_menu{
+	width:300px;
+}
+ul#service_menu li{
+	font-size:14px;
+	font-variant:small-caps;
+	margin-bottom:4px;
+	list-style-type:square;
+}
+ul#service_menu li a{
+	color:#999;
+	text-decoration:none;
+}
+ul#service_menu li a:hover{
+	color:#ddd;
+	font-variant:uppercase;
+}
 table.service-wrapper{
-
+	width:450px;
+}
+table.service-wrapper tr{
+	margin-bottom:10px;
 
 }
 table.service-wrapper th{
 	font:14px;
+	line-height:175%;
 	font-weight:bold;
+	font-variant:small-caps;
+	text-align:left;
+	border-bottom:thin solid white;
+	padding-bottom:10px;
+}
+
+
+.service_footer{
+	margin-top:20px;
 }

@@ -1,4 +1,8 @@
 <p>
+  This image is shown on the 
+  <%=link_to @image.location, :controller=>'info', :action=>@image.location %> page
+</p>
+<p>
  <% if @image %>
    <%= link_to image_tag(@image.public_filename(:thumb)), @image.public_filename %>
  <% else %>

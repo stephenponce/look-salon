@@ -1,0 +1,3 @@
+
+page['main_img'] = <%= image_tag 'main2.jpg' %>
+

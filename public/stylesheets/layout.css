@@ -1,0 +1,147 @@
+#wrapper{
+	height:1000px;
+        margin:auto;
+	width:900px;
+	padding:5px;
+	background-color:black;
+}
+#main_img{
+	border-color:#1b1e1f #1b1e1f #1b1e1f #1b1e1f;
+	border-style:solid solid solid solid ;
+	border-width:3px 5px 3px 3px;
+	float:left;
+	width:290px;
+	margin-bottom:20px;
+	padding-right:7px;
+}
+
+/* NAVIGATION */
+#nav_wrapper{
+	float:left;
+	width:100px;
+	clear:right;
+	margin-left:-16px;
+	padding-right:10px;
+	margin-top:-2px;
+}
+ul#menu{
+	padding:0em;
+	margin:0em;
+	list-style-type:none;
+	margin-bottom:5px;
+}
+ul#menu li{
+	width:110px;
+	height:107px;
+	text-align:right;	
+	margin-bottom:5px;
+}
+ul#menu li a{
+	color:transparent;
+}
+ul#menu li a:hover{
+	color:transparent;
+}
+
+/* CONTENT WRAPPER */
+#content_wrapper{
+	float:right;
+	background-color:#1a1e1f;
+	border:4px #121315 solid;
+	width:480px;
+	margin-right:11px;
+
+}
+#content{
+	float:right;
+	margin:5px;
+	margin-top:10px;
+	padding:10px;
+	min-height:440px;
+}
+
+/* BOTTOM HEADER */
+#bottom_header{
+	clear:both;
+	margin:10px;
+	display:none;
+}
+#top_wrapper{
+	min-height:100px;
+}
+#top_left{
+	float:left;
+	background-image:url('/images/tls_logo.png');
+	background-repeat:no-repeat;
+	width:399px;
+	height:100px;
+	padding-top:5px;	
+
+}
+#top_right{
+	background-image:url('/images/logo.jpg');
+	width:488px;
+	height:100px;
+	padding-top:5px;	
+	margin-left:401px;
+}
+#top_left h2, #top_right h2{
+	vertical-align:baseline;
+	line-height:64px;
+	font-size:32px;
+	padding:5px;
+	padding-top:25px;
+	padding-left:25px;
+	text-align:left;
+	font-variant:small-caps;
+}
+#top_left .header{
+	margin-left:105px;
+	letter-spacing:4px;
+	color:#B4BEC1;
+	font-size:24px;
+		
+}
+.second{
+	color:#427785;	
+}
+.third{
+/*	color:#427785;	*/
+
+}
+#top_logo a{
+	text-decoration:none;
+}
+#top_header{
+	
+}
+#middle_wrapper{
+	clear:both;
+	margin-top:4px;
+
+}
+
+/* SECOND NAV */
+ul.second_nav {
+	text-align:right;
+	margin-left:200px;
+	margin-bottom:10px;	
+}
+ul#long_menu{
+	margin-left:0px;
+}
+ul.second_nav li{
+	display:inline;
+	margin-left:10px;
+}
+ul.second_nav li#current a{ 
+	color:#872019;
+}
+ul.second_nav li a{
+	color:white;
+	font-variant:small-caps;
+	text-decoration:none;
+}
+ul.second_nav li a:hover{
+	text-decoration:underline;
+}

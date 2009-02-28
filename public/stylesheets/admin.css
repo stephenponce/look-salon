@@ -162,6 +162,7 @@ li#current a{
 	margin: 0;
 	padding: 20px 0 0 0;
 	line-height: normal;
+	text-align:right;
 }
 
 #general_info {

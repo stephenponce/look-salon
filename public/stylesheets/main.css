@@ -1,9 +1,3 @@
-/*
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-*/
-
 * {
 	margin: 0;
 	padding: 0;
@@ -11,7 +5,7 @@ Released for free under a Creative Commons Attribution 2.5 License
 
 body {
 	background-color:black;
-	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-family: Georgia, Palantino, Times New Roman, serif;
 	font-size: 13px;
 	color: #666666;
 }
@@ -39,135 +33,20 @@ a:hover {
 }
 
 .boxed {
-	padding: 20px;
-	background:
-url(../images/secondimg3.jpg) repeat-x;
 }
 
 .heading {
-	margin-bottom: 40px;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	font-size: 14px;
 	border-bottom:1px solid #FFF;
-	color:#999;
+	color:#427785;
+}
+.second_word{
+	color:#b4bec1;
 }
 
-/* Header */
-
-#header {
-	width: 900px;
-	margin: 0 auto;
-	padding:0px;
-	clear:both;
-}
-
-#header a {
-	text-decoration: none;
-	font-variant: small-caps;
-	color: #FFF;
-}
-
-#header h1 {
-	padding-top: 50px;
-	letter-spacing: 4px;
-	font-size: 36px;
-	float:right;
-	margin-top:40px;
-}
-
-#header h2 {
-	letter-spacing: 8px;
-	font-size: 14px;
-}
-
-#wrapper{
-	border:4px solid #555;
-	background-color:#111;
-	width:900px;
-	margin:auto;
-}
-#topNav{
-	clear:both;
-	width:900px;
-	margin:auto;
-	margin-top:20px;
-}
-ul#navigation li{
-	margin-left:10px;
-	padding-left:5px;
-	display:inline;
-}
-li#current a{
-	color:red;
-}
-/* Columns */
-
-#left {
-	float: left;
-	width: 240px;
-	margin-left: 10px;
-}
-
-#right {
-	float: right;
-	width: 220px;
-	margin-right: 10px;
-}
-
-
-#left ul, #left ol, #right ul, #right ol {
-	list-style-position: inside;
-}
-
-#left li, #right li {
-	margin-bottom: 1.5em;
-}
-#right ul li{
-  list-style-type:none;
-}
-#right ul li h3 a{
+.heading a{
 	text-decoration:none;
-}
-#right ul li a:hover{
-	text-decoration:underline;
-}
-
-#center {
-	width:650px;
-	margin-left:10px;
-}
-
-#center ul, #center ol {
-	margin-left: 3em;
-}
-
-#image_wrapper{
-	float:left;
-	margin:4px;
-	margin-right:10px;
-}
-/* Footer */
-
-#footer {
-	font-size: 77%;
-	color: #FFFFFF;
-	width:900px;
-}
-
-
-#legal_notes {
-	float:right;
-	width:300px;
-	margin: 0;
-	padding: 20px 0 0 0;
-	line-height: normal;
-}
-
-#general_info {
-	float:left;
-	width:300px;
-	margin: 0;
-	padding: 20px 0;
-	line-height: normal;
+	color:#427785;
 }
