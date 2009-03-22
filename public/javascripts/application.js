@@ -14,9 +14,9 @@ function animate(){
 	var top_left=$('top_left');
 	var top_right=$('top_right');
 
-	new Effect.BlindDown(image,  {duration:1.0});
+	new Effect.Appear(image,  {duration:0.5});
 
-	new Effect.Grow(main,  {direction:'top-left', duration:1.0} );
+	new Effect.Grow(main,  {direction:'top-left', duration:0.7} );
 	new Effect.Appear(top_left,  {duration:1.0, delay:1.0} );
 	new Effect.Appear(content,  {duration:1.0, delay:1.0} );
 

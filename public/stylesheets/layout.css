@@ -13,6 +13,8 @@
 	width:290px;
 	margin-bottom:20px;
 	padding-right:7px;
+	max-height:426px;
+	overflow:hidden;
 }
 
 /* NAVIGATION */
@@ -34,7 +36,6 @@ ul#menu li{
 	width:110px;
 	height:107px;
 	text-align:right;	
-	margin-bottom:5px;
 }
 ul#menu li a{
 	color:transparent;
