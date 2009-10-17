@@ -2,7 +2,9 @@ class PostsController < ApplicationController
   layout :choose_layout
   active_scaffold :post
 
- 
+  def promos
+  end 
+
   def show
     @post = Post.find(params[:id])
 
@@ -11,6 +13,7 @@ class PostsController < ApplicationController
       format.xml  { render :xml => @post }
     end
   end
+
 end
 class OldPostsController
   # GET /posts

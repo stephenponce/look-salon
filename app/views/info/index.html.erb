@@ -1,5 +1,26 @@
-<h2 class='heading'> Home</h2>
 
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
+<div id='submenu_wrapper'>
+   <div class='welcome_message'>
+     <%= image_tag 'friends' %>
+   </div>
+    <p class='intro'>
+      Friends -
+      <%= @main_post.body %>
+    </p>
+</div>
+
+<div class='image_wrapper'>
+
+</div>
+
+<div class='text_box'>
+
+</div>
+
+<div class='module_2'>
+  <%= render :partial=>'posts_preview' %>
+</div>
+
+<div class='module_3'>
+  <%= render :partial=>'gallery_preview' %>
+</div>

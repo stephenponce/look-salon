@@ -1,8 +1,14 @@
 require 'test_helper'
 
 class TagTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+
+  test "should have a unique order number" do
+
+    tag = Tag.new(:name=>'test_tag', :order=>tags(:one).order)
+    tag.valid?
+
+    assert_not_nil tag.errors.on(:order)
   end
+
+
 end

@@ -1,10 +1,25 @@
 ActionController::Routing::Routes.draw do |map|
 
+# A bunch of admin re-routing to the actual controllers
   map.connect 'admin/', :controller=>'admin', :action=>'panel'
   map.connect 'admin/index', :controller=>'admin', :action=>'panel'
   map.connect 'admin/panel', :controller=>'admin', :action=>'panel'
+  map.connect 'admin/gallery', :controller=>'images', :action=>'index'
+  map.connect 'admin/services', :controller=>'services', :action=>'index'
+  map.connect 'admin/service_types', :controller=>'tags', :action=>'index'
+  map.connect 'admin/posts', :controller=>'posts', :index=>'index'
 
   map.connect 'info/home', :controller=>'info', :action=>'index'
+
+  # used to redirect pages that are not production ready
+  map.connect 'info/products', :controller=>'info', :action=>'coming_soon'
+  map.connect 'info/appointments', :controller=>'info', :action=>'coming_soon'
+
+  # map.with_options :controller=>'info' do |i|
+  #  i.products '/info/coming_soon', :action=>'products'
+  # end
+
+
 
   map.resources :tags, :active_scaffold => true
 
@@ -14,7 +29,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :images
 
-  map.resources :stylists
+  map.resources :stylists, :active_scaffold => true
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -57,4 +72,7 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing the them or commenting them out if you're using named routes and resources.
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
+
+  # "Catch All Routing to Request_Error Page"
+  #  map.connect '*', :controller=>'info', :action=>'request_error'
 end

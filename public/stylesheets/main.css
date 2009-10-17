@@ -5,7 +5,8 @@
 
 body {
 	background-color:black;
-	font-family: Georgia, Palantino, Times New Roman, serif;
+	font-family: Arial, Helvetica, san-serif;
+	/*OLD font-family: Georgia, Palantino, Times New Roman, serif;*/
 	font-size: 13px;
 	color: #666666;
 }
@@ -31,19 +32,37 @@ a {
 a:hover {
 	text-decoration: none;
 }
-
+img.gallery{
+	color:#427785;
+}
 .boxed {
+	margin-bottom:20px;
 }
 
 .heading {
 	text-transform: uppercase;
-	letter-spacing: 3px;
-	font-size: 14px;
+	letter-spacing: 1px;
+	font-size: 16px;
+	font-weight:lighter;
 	border-bottom:1px solid #FFF;
 	color:#427785;
 }
-.second_word{
+.subheading{
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 12px;
+	border-bottom:1px dotted #FFF;
+	color:#427785;
+
+}
+.white{
 	color:#b4bec1;
+}
+.teal{
+	color:#427785;
+}
+.teal_grey{
+	color:#2a373d;
 }
 
 .heading a{

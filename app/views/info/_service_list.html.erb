@@ -1,0 +1,22 @@
+  <!-- put tag info here -->
+<div id='submenu_wrapper'>
+  <ul class='second_nav', id='long_menu' >
+    <% for tag in tags %>
+      <% if tag.name == @display_tag.name %>
+        <li id ='current'>
+          <%=link_to tag.name, :action=>'show_service', :id=>tag %>
+        </li>
+      <% else %>
+        <li>
+          <%=link_to tag.name, :action=>'show_service', :id=>tag %>
+        </li>
+      <% end %>
+    <% end %>
+      <li>
+        <%=link_to 'Packages', :controller=>'info', :action=>'services' %>
+      </li>
+  </ul>
+</div>
+  <!--just a sample of random services go here -->
+
+

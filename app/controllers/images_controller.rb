@@ -1,10 +1,12 @@
 class ImagesController < ApplicationController
+  layout :choose_layout
+  active_scaffold :post
 
   # GET /images
   # GET /images.xml
   def index
     #this ensures that only the original images are chosen and excludes the thumbnails
-    @images = Image.find(:all, :conditions=> {:parent_id => nil} , :order=>'created_at DESC')
+    @images = Image.find(:all, :conditions=> {:parent_id => nil} , :order=>'position, created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -48,7 +50,7 @@ class ImagesController < ApplicationController
     respond_to do |format|
       if @image.save
         flash[:notice] = 'Image was successfully created.'
-        format.html { redirect_to(@image) }
+        format.html { redirect_to(:controller=>'admin', :action=>'gallery') }
         format.xml  { render :xml => @image, :status => :created, :location => @image }
       else
         format.html { render :action => "new" }
@@ -85,4 +87,23 @@ class ImagesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def update_caption
+    @image = Image.find(params[:id])
+    @image.caption = @params[:value]
+    if @image.save
+      render :text => textilight(@image.caption)
+    end
+  end
+
+  def sort
+    image_ids = @params[:image_list]
+    image_ids.each_with_index do | image_id, index |
+      image = Image.find asset_id
+      image.update_attributes(:position, index)
+    end
+    render :nothing => true
+  end
+
+  
 end

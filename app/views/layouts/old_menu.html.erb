@@ -1,0 +1,56 @@
+
+<ul id='menu'>
+<!-- INDEX -->
+    <% if controller.controller_name=='info' && action_name == 'index' %>
+      <li id='nav_home' > <%= link_to image_tag("nav/new/home_small_on.jpg")	, :controller=>"info", :action=>"index", :onclick=>:slide_image %></li>
+    <% else %>
+      <li id='nav_home' > <%= link_to image_tag("nav/new/home_small_off.jpg", :onmouseover=>"this.src='/images/nav/new/home_small_on.jpg'", :onmouseout=>"this.src='/images/nav/new/home_small_off.jpg'"  ), :controller=>"info", :action=>"index" %></li>
+    <% end %>
+<!-- ABOUT -->
+    <% if action_name == 'about' %>
+      <li id='nav_about' > <%= link_to image_tag("nav/new/about_small_on.jpg"), :controller=>'info', :action=>'about' %> </li>
+    <% else %>
+      <li id='nav_about' > <%= link_to image_tag("nav/new/about_small_off.jpg", :onmouseover=>"this.src='/images/nav/new/about_small_on.jpg'", :onmouseout=>"this.src='/images/nav/new/about_small_off.jpg'"  ), :controller=>'info', :action=>'about' %> </li>
+    <% end %>
+
+<!-- PRODUCTS -->
+    <% if action_name == 'product' %>
+      <li id='nav_product'> <%= link_to image_tag("nav/new/products_small_on.jpg"), :controller=>'info', :action=>'products' %> </li>
+    <% else %>
+      <li id='nav_product' > <%= link_to image_tag("nav/new/products_small_off.jpg", :onmouseover=>"this.src='/images/nav/new/products_small_on.jpg'", :onmouseout=>"this.src='/images/nav/new/products_small_off.jpg'"  ), :controller=>'info', :action=>'products' %> </li>
+    <% end %> 
+
+<!-- SERVICES -->
+    <% if action_name == 'services' || action_name == 'show_service' %>
+	  <li id='nav_service' > <%= link_to image_tag("nav/new/service_small_on.jpg"),:controller=>'info', :action=>'services' %> </li>
+    <% else %>
+	  <li id='nav_service' > <%= link_to image_tag("nav/new/service_small_off.jpg", :onmouseover=>"this.src='/images/nav/new/service_small_on.jpg'", :onmouseout=>"this.src='/images/nav/new/service_small_off.jpg'"  ), :controller=>'info', :action=>'services' %> </li>
+    <% end %>
+
+<!-- PROMOS -->
+    <% if action_name == 'promotions' || action_name == 'show_promotions' %>
+	  <li id='nav_promotions' > <%= link_to image_tag("nav/new/promotions_small_on.jpg"),:controller=>'info', :action=>'promotions' %> </li>
+    <% else %>
+	  <li id='nav_promotions' > <%= link_to image_tag("nav/new/promotions_small_off.jpg", :onmouseover=>"this.src='/images/nav/new/promotions_small_on.jpg'", :onmouseout=>"this.src='/images/nav/new/promotions_small_off.jpg'"  ), :controller=>'info', :action=>'promotions' %> </li>
+    <% end %>
+<!-- GALLERIES -->
+    <% if action_name == 'gallery' || action_name == 'show_gallery' %>
+	  <li id='nav_gallery' > <%= link_to image_tag("nav/new/gallery_small_on.jpg"),:controller=>'info', :action=>'gallery' %> </li>
+    <% else %>
+	  <li id='nav_gallery' > <%= link_to image_tag("nav/new/gallery_small_off.jpg", :onmouseover=>"this.src='/images/nav/new/gallery_small_on.jpg'", :onmouseout=>"this.src='/images/nav/new/gallery_small_off.jpg'"  ), :controller=>'info', :action=>'gallery' %> </li>
+    <% end %>
+<!-- APPOINTMENTS -->
+    <% if action_name == 'appointments' || action_name == 'show_appointments' %>
+	  <li id='nav_appointments' > <%= link_to image_tag("nav/new/appointments_small_on.jpg"),:controller=>'info', :action=>'appointments' %> </li>
+    <% else %>
+	  <li id='nav_appointments' > <%= link_to image_tag("nav/new/appointments_small_off.jpg", :onmouseover=>"this.src='/images/nav/new/appointments_small_on.jpg'", :onmouseout=>"this.src='/images/nav/new/appointments_small_off.jpg'"  ), :controller=>'info', :action=>'appointments' %> </li>
+    <% end %>
+
+<!-- CONTACT -->
+    <% if action_name == 'contact' %>
+	  <li id='nav_contact' > <%= link_to image_tag("nav/new/contact_small_on.jpg"), :controller=>'info', :action=>'contact' %> </li>
+    <% else %>
+	  <li id='nav_contact' > <%= link_to image_tag("nav/new/contact_small_off.jpg", :onmouseover=>"this.src='/images/nav/new/contact_small_on.jpg'", :onmouseout=>"this.src='/images/nav/new/contact_small_off.jpg'"  ), :controller=>'info', :action=>'contact' %> </li>
+    <% end %>
+</ul>
+

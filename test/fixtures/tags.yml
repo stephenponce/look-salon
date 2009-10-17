@@ -1,7 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
+  name: 'Service Type One'
+  order: 1
 
 two:
-  name: MyString
+  name: 'Service Type Two'
+  order: 2
+
+three:
+  name: 'Service Type Three'
+  order: 3

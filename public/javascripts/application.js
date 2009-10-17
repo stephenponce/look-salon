@@ -33,3 +33,9 @@ function animate(){
 
 
 }
+
+
+/* implementation of scrolling div */
+function scrollingDiv(divID){
+	
+}

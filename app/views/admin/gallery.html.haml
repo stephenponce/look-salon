@@ -1,0 +1,15 @@
+#center
+  .boxed
+    %h1.heading
+      Gallery Panel
+    %p
+      From this page you can make any changes to your web gallery
+    %h3.heading
+      Actions
+    %ul
+      %li
+        = link_to 'Add Image', :controller=>'admin', :action=>'add_image'
+      %li
+        = link_to 'Sort Images', :controller=>'admin', :action=>'sort_images'
+      
+

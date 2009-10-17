@@ -1,8 +1,3 @@
-/*
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-*/
 
 * {
 	margin: 0;
@@ -45,7 +40,8 @@ url(../images/secondimg3.jpg) repeat-x;
 }
 
 .heading {
-	margin-bottom: 40px;
+	font-family:georgia;
+	margin-bottom: 15px;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	font-size: 14px;
@@ -53,13 +49,19 @@ url(../images/secondimg3.jpg) repeat-x;
 	color:#999;
 }
 
-/* Header */
+/* Main Containers */
+#left{
+	float:left;
+}
+#right{
+	float:right;
+}
+
+
+
 
 #header {
-	width: 900px;
-	margin: 0 auto;
-	padding:0px;
-	clear:both;
+	width: 200px;
 }
 
 #header a {
@@ -81,38 +83,59 @@ url(../images/secondimg3.jpg) repeat-x;
 	font-size: 14px;
 }
 
-#wrapper{
-	border:4px solid #555;
-	background-color:#111;
+#admin_wrapper{
 	width:900px;
-	margin:auto;
+	margin-left:50px;
+
 }
-#topNav{
+#wrapper{
+	background-color:#111;
+	width:745px;
+	margin:auto;
+	float:right;
+}
+#main_nav{
+
 	clear:both;
-	width:900px;
+	width:200px;
 	margin:auto;
 	margin-top:20px;
 }
-ul#navigation li{
-	margin-left:10px;
-	padding-left:5px;
-	display:inline;
+ul#navigation{
+	font-family:georgia;
+	font-weight:bold;
+	vertical-align:bottom;
+	font-size:14px;
+	margin:0px;
 }
-li#current a{
+ul#navigation li{
+	height:40px;
+	list-style-type:none;
+
+	background-color:#111;
+	margin:0px;
+
+
+	border:1px solid white;
+	margin-bottom:3px;
+	padding:4px;
+}
+ul#navigation li a:hover{
+	text-decoration:underline;
+	color:#222;
+}
+ul#navigation li.current{
+}
+ul#navigation li.current a{
 	color:red;
+	text-decoration:none;
 }
 /* Columns */
 
 #left {
 	float: left;
-	width: 240px;
+	width: 140px;
 	margin-left: 10px;
-}
-
-#right {
-	float: right;
-	width: 220px;
-	margin-right: 10px;
 }
 
 
@@ -126,7 +149,7 @@ li#current a{
 #right ul li{
   list-style-type:none;
 }
-#right ul li h3 a{
+#right ul li a{
 	text-decoration:none;
 }
 #right ul li a:hover{
@@ -171,4 +194,22 @@ li#current a{
 	margin: 0;
 	padding: 20px 0;
 	line-height: normal;
+}
+
+.quickLinks{
+	width:600px;
+}
+.quickLinks ul li{
+	display:inline;
+}
+
+table.new{
+	width:600px;
+}
+.bottomrow{
+	padding:10px;
+	cell
+	margin-top:10px;
+	margin-bottom:10px;
+	padding:10px;
 }

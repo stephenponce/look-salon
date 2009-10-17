@@ -1,8 +1,17 @@
-<div class='boxed'>
+<div class='quickLinks'>
   <h2 class='heading'>Quick Links </h1>
   <ul>
     <li>
-      <%= link_to 'Add Announcement', :controller=>'posts', :action=>'new' %>
+      <%= link_to 'View Public Site', :controller=>'info', :action=>'index' %>
+    </li>
+    <li>
+      <%= link_to 'Add Promotion', :controller=>'promotions', :action=>'new' %>
+    </li>
+    <li>
+      <%= link_to 'New Announcement', :controller=>'posts', :action=>'new' %>
+    </li>
+    <li>
+      <%= link_to 'Add Product', :controller=>'products', :action=>'new' %>
     </li>
     <li>
       <%= link_to 'Add Services', :controller=>'services', :action=>'new' %>

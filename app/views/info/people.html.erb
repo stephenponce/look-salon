@@ -1,0 +1,23 @@
+<h2 class='heading'> <span class='white'> Meet </span> Our <span class='white'>Staff </span></h2>
+
+<div id='submenu_wrapper'>
+  <%= render :partial=>'about_us' %>
+
+</div>
+
+  <p>
+    Our wide range of unique talents help you find the designer right for your personal look.
+  </p>
+  <div class='boxed'>
+    <% for image in @images %>
+      <%= link_to_remote image_tag(image.public_filename(:thumb), :height=>'100', :class=>'gallery'), 	
+		:url=> { :action=>'show_image_ajax', :id=>image },
+		:onclick =>"new Effect.Fade('image_wrapper');",
+		:complete=> "new Effect.Blinddown('image_wrapper', {duration:1.0})" %>
+<!---		:update=> {:success=>'image_wrapper', :failure=>'err	ors' },
+		:loading=> "$('image_wrapper').hide(); $('ajax_indicator').show();", 
+		:complete=> "$('ajax_indicator').hide(); visual_effect(:toggle_appear)" %>
+--->
+    <% end %>
+  </div>
+

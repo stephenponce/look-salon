@@ -1,0 +1,30 @@
+#center
+  .boxed
+    %h1.heading
+      Gallery Panel
+    %p
+      Edit Image
+    %h3.heading
+    %p
+    %p
+      - form_for(@image) do |f|
+        = f.error_messages
+        %table
+          %tr
+            %td
+            %td
+              = link_to (image_tag(@image.public_filename(:thumb)), @image.public_filename, :target=>:blank)
+          %tr
+            %td
+              Caption:
+            %td
+              = f.text_field :caption
+          %tr
+            %td
+              Position:
+            %td
+              = f.text_field :position, :size=>2
+        %p
+          = f.submit "Update"
+    %p
+      = link_to '<< Back', images_path

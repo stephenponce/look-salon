@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>The Look Salon </title>
+  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'reset' %>
+  <%= stylesheet_link_tag 'main' %>
+  <%= stylesheet_link_tag 'layout' %>
+  <%= stylesheet_link_tag 'services' %>
+  <%= javascript_include_tag :defaults %>
+
+</head>
+<body onload='animate();'>
+  <p style="color: green"><%= flash[:notice] %></p>
+  <div id ='wrapper'>
+
+    <div id='top_wrapper'>
+      <div id='top_left'>
+	<h2 class='header'>
+	  <%= render :partial=>'layouts/breadcrumb' %>
+	</h2>
+      </div>
+      <div id='top_right'>
+	<div class='brand'>        
+        <h2>
+	  The
+	</h2>
+        <h2>
+  	  <span class='second'>	    Look 	  </span>
+	</h2>
+        <h2>
+	  <span class='third'>	    Salon	  </span>
+	</h2>
+	</div>
+      </div>
+
+  
+    </div>
+  <div id='middle_wrapper' >
+    <div id='main_img'>
+      <div id='image_wrapper' style='display:none;'>
+        <%= render :partial=>'layouts/image' %>
+      </div>
+      <!-- ajax loader is hidden/used for gallery page
+      <div id='ajax_indicator'>
+        <%= image_tag('look_ajax_loader.gif', :class=>'ajax') %>
+      </div>
+ -->
+
+    </div>
+    <div id='nav_wrapper'>
+      <%= render :partial=>'layouts/menu', :locals=>{:action_name=>controller.action_name} %>
+<!--      <ul id='menu'>
+
+	  <li id='nav_home' > <%= link_to image_tag("nav/home_off.jpg", :onmouseover=>"this.src='/images/nav/home_on.jpg'", :onmouseout=>"this.src='/images/nav/home_off.jpg'"  ), :controller=>"info", :action=>"index" %></li>
+	  <li id='nav_about' > <%= link_to image_tag("nav/about_off.jpg", :onmouseover=>"this.src='/images/nav/about_on.jpg'", :onmouseout=>"this.src='/images/nav/about_off.jpg'"  ), :controller=>'info', :action=>'about' %> </li>
+
+	  <li id='nav_service' > <%= link_to image_tag("nav/service_off.jpg", :onmouseover=>"this.src='/images/nav/service_on.jpg'", :onmouseout=>"this.src='/images/nav/service_off.jpg'"  ), :controller=>'info', :action=>'services' %> </li>
+	  <li id='nav_contact' > <%= link_to image_tag("nav/contact_off.jpg", :onmouseover=>"this.src='/images/nav/contact_on.jpg'", :onmouseout=>"this.src='/images/nav/contact_off.jpg'"  ), :controller=>'info', :action=>'contact' %> </li>
+      </ul>
+    
+-->
+    </div>
+    <div id='content_wrapper' style='display:none;'>
+      <div id='content', style="display:none;">
+        <%= yield  %>
+      </div>
+    </div>
+  </div>
+    <div id='bottom_header'>
+      <div id='bottom_logo'>
+      </div>
+  
+      <h1> <%=link_to ('The Look Salon', :action=>'#') %> </h1>
+      <div id='nav_description'>
+      </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

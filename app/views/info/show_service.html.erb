@@ -1,5 +1,7 @@
+<h3 class='heading'> Our <span class='white'>Services</span> </h3>
+
 <!--RENDERS SERVICE TAGS -->
-<%= render :partial=>'service', :locals=>{:tags => @tags} %>
+<%= render :partial=>'service_list', :locals=>{:tags => @tags} %>
 
 
 <table class='service-wrapper'>
@@ -11,7 +13,7 @@
       Price Range
     </th>
   </tr>
-  <% for service in @tag.services %>
+  <% for service in @display_tag.services %>
     <tr>
       <td>
         <%=h service.title %>

@@ -1,0 +1,12 @@
+
+<div class='boxed'>
+  <% if @posts.length == 3 %>
+    <ul class='posts'>
+      <li> <%= link_to @posts[1], @posts.updated_at %> </li>
+      <li> <%= link_to @posts[2], @posts.updated_at %> </li>
+    </ul>
+   <% else %>
+     
+   <% end %>
+</div>
+

@@ -1,9 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  title: MyString
-  body: MyString
+announcement:
+  title: Announcement
+  body: Summer hours starting next week
+  post_type: announcement
 
-two:
-  title: MyString
-  body: MyString
+promo:
+  title: Easter Promo
+  body: Buy a 50 dollar gift card, get an additional 20 dollar gift card
+  post_type: promotion

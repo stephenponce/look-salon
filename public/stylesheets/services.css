@@ -17,6 +17,7 @@ ul#service_menu li a:hover{
 }
 table.service-wrapper{
 	width:450px;
+	padding:10px;
 }
 table.service-wrapper tr{
 	margin-bottom:10px;
@@ -29,7 +30,7 @@ table.service-wrapper th{
 	font-variant:small-caps;
 	text-align:left;
 	border-bottom:thin solid white;
-	padding-bottom:10px;
+	color:#B4BEC1;
 }
 
 

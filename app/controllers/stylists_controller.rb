@@ -1,5 +1,6 @@
 class StylistsController < ApplicationController
   layout :choose_layout
+  active_scaffold :stylist
   # GET /stylists
   # GET /stylists.xml
   def index

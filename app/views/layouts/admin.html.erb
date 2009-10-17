@@ -12,33 +12,17 @@
   <%= stylesheet_link_tag 'admin' %>
 </head>
 <body>
+<div id='admin_wrapper'>
   <p style="color: green"><%= flash[:notice] %></p>
   <% if logged_in? %>
     <div id='account_panel'>
       <%= link_to 'Log Out', :controller=>'account', :action=>'logout' %>
       <br />
-      Logged in as: <%=h current_user.login %> 
+      Logged in as: <b><%=h current_user.login %> </b>
     </div>
   <% end %>
-  <div id='header'>
-    <h1> <%=link_to ('The Look Salon', url_for('/') ) %> </h1>
-    <div id ='topNav'>
-        <ul id='navigation'>
-            <% if controller.action_name == 'panel' %>
-              <li class='current'> <%= link_to 'Panel', :controller=>'admin', :action=>'panel' %> </li>
-            <% else %>
-              <li> <%= link_to 'Panel', :controller=>'admin', :action=>'panel' %> </li>
-            <% end %>
-            <li> <%= link_to 'Services', :controller=>'services', :action=>'index' %> </li>
 
-            <li> <%= link_to 'Tags', :controller=>'tags', :action=>'index' %></li>
-  
-            <li> <%= link_to 'Announcements', :controller=>'posts', :action=>'index' %> </li>
-
-	    <li> <%= link_to 'Stylists', :controller=>'stylists', :action=>'index' %> </li>
-         </ul>
-    </div>
-  </div>
+  <%= render :partial=>'layouts/admin/nav' %>
   <div id='wrapper'>
     <%= yield  %>
     <div style='clear:both;'></div>
@@ -54,5 +38,6 @@
     </div>
     
   </div>
+</div>
 </body>
 </html>

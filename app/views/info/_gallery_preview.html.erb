@@ -1,0 +1,16 @@
+<div class='boxed'>
+  <h2 class='heading'> Your Image is Unique and Beautiful</h2>
+  <div class='boxed'>
+    <% for image in @images %>
+      <%= link_to_remote image_tag(image.public_filename(:thumb), :height=>'100', :class=>'gallery'),
+                :url=> { :action=>'show_image_ajax', :id=>image },
+                :onclick =>"new Effect.Fade('image_wrapper');",
+                :complete=> "new Effect.Blinddown('image_wrapper', {duration:1.0})" %>
+<!---           :update=> {:success=>'image_wrapper', :failure=>'err    ors' },
+                :loading=> "$('image_wrapper').hide(); $('ajax_indicator').show();",
+                :complete=> "$('ajax_indicator').hide(); visual_effect(:toggle_appear)" %>
+--->
+    <% end %>
+  </div>
+</div>
+

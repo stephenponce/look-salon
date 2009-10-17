@@ -1,8 +1,8 @@
 <% page = controller.action_name %>
 <% if controller.controller_name == 'info' %>
 
-  <% if page =='home' || page == 'index' %>
-    <%= image_tag('/uploads/main1.jpg') %>
+  <% if page =='home' || page == 'index' || page=='coming_soon' %>
+    <%= image_tag('new_logo1.jpg') %>
   
   <% end %>  
   <% if page =='about' %>
@@ -21,6 +21,9 @@
     <%= image_tag('/uploads/main4.jpg') %>
 
   <% end %>  
+  <% if page == 'gallery' %>
+    <%= image_tag('new_logo2.jpg') %>
+  <% end %>
 <% else %>
   <%= image_tag('uploads/main1.jpg') %>
 <% end %>

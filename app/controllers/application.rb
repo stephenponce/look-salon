@@ -4,8 +4,14 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
 
+#page list for breadcrumb
+#  pages = {'1'=>['index'], '2'=>['about', 'philosophy', 'people'], '3'=>['products']}
+
+
   #Used for admin authentication
   include AuthenticatedSystem
+
+  
 
   def choose_layout
     if logged_in?

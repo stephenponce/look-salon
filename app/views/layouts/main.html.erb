@@ -19,21 +19,21 @@
 
     <div id='top_wrapper'>
       <div id='top_left'>
-	<h2 class='header'>
-	  <%= render :partial=>'layouts/breadcrumb' %>
-
-	</h2>
-
+        <div id='top_logo'>
+          <%= image_tag 'top_logo.jpg' %>
+        </div>
+	<div class='brand'>
+          <h2> The </h2>
+          <h2 class='second'> Look </h2>
+          <h2 class='third'> Salon </h2>
+	</div>
       </div>
-
       <div id='top_right'>
-        <h2 class='header'>
-	  the
-  	  <span class='second'>	    Look 	  </span>
-	  <span class='third'>	    Salon	  </span>
+	<h2 class='header'>
+          <%= breadcrumb(controller.action_name) %>
 	</h2>
-
       </div>
+
   
     </div>
   <div id='middle_wrapper' >
@@ -41,6 +41,12 @@
       <div id='image_wrapper' style='display:none;'>
         <%= render :partial=>'layouts/image' %>
       </div>
+      <!-- ajax loader is hidden/used for gallery page
+      <div id='ajax_indicator'>
+        <%= image_tag('look_ajax_loader.gif', :class=>'ajax') %>
+      </div>
+ -->
+
     </div>
     <div id='nav_wrapper'>
       <%= render :partial=>'layouts/menu', :locals=>{:action_name=>controller.action_name} %>
@@ -56,7 +62,7 @@
 -->
     </div>
     <div id='content_wrapper' style='display:none;'>
-      <div id='content', style='display:none;'>
+      <div id='content', style="display:none;">
         <%= yield  %>
       </div>
     </div>
@@ -65,7 +71,7 @@
       <div id='bottom_logo'>
       </div>
   
-      <h1> <%=link_to ('The Look Salon', :action=>'#' ) %> </h1>
+      <h1> <%=link_to ('The Look Salon', :action=>'#') %> </h1>
       <div id='nav_description'>
       </div>
     </div>

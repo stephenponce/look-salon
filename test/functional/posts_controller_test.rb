@@ -15,4 +15,14 @@ class PostsControllerTest < ActionController::TestCase
     assert_template 'create_form'
   end
 
+  test "should get promo page" do
+    get :promos
+    assert_response :success
+
+  end
+
+  test "should get announcement page" do
+    get :announcements
+    assert_response :success
+  end 
 end

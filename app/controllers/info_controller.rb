@@ -1,9 +1,20 @@
 class InfoController < ApplicationController
-  layout 'main'
+  layout 'main', :except=>[:show_image_ajax]
 
+  def show_image_ajax
+    logger.info params.inspect
+
+    @display = Image.find(params[:id])
+    render(:update) { |page| page.replace_html 'image_wrapper', "<img src='#{@display.public_filename}' >"}
+  end
 
   def index
-    @post=Post.find(:first)
+    @posts=Post.find(:all, :limit=>3)
+
+    @main_post = @posts[0]
+
+    @images = Image.find(:all, :limit=>5, :conditions=> {:parent_id => nil})
+
     respond_to do |format|
       format.html #index.html.erb
     end
@@ -26,7 +37,14 @@ class InfoController < ApplicationController
   end
   def show_service
     @tags= Tag.find(:all)
-    @tag = Tag.find(params[:id])
+    @display_tag = Tag.find(params[:id])
+  end
+
+  def gallery
+    @images = Image.find(:all, :conditions=> {:parent_id => nil})
+  end
+  def people
+    @images = Image.find(:all, :conditions=> {:parent_id => nil}, :limit=>3)
   end
   
 end

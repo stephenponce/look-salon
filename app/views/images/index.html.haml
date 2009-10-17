@@ -1,0 +1,37 @@
+#center
+  .boxed
+    %h1.heading
+      Gallery Panel
+    %p
+      From this page you can make any changes to your web gallery
+    %h3.heading
+      Quick Links
+    %ul.actions
+      %li
+        = link_to 'Add Image', new_image_path
+      %li
+        = link_to 'Sort Images', :controller=>'admin', :action=>'sort_images'
+
+    %h3.heading
+      Gallery
+    %table
+      %tr
+        %th
+          Order
+        %th
+          Actions
+        %th
+          Image
+      - for image in @images
+        %tr
+          %td
+            = image.position
+          %td
+            = link_to ('Edit', :action=>'edit', :id=> image )
+            = link_to ('Delete', image, :confirm=>"Are you sure?", :method => :delete ) 
+          %td
+            = link_to (image_tag(image.public_filename(:thumb)), image.public_filename, :target=>:blank) 
+            %br
+            %p
+              = image.caption
+

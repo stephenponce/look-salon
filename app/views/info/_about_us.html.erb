@@ -1,18 +1,33 @@
 
-  <h2 class='heading'> About <span class='second_word'>Us </span></h2>
   <ul class='second_nav'>
     <% if controller.action_name=='about' && controller.controller_name=='info' %>
       <li id='current'>
-        <%= link_to('Our Philosophy', :action=>'about') %>
+        <%= link_to('About Us', :action=>'about') %> 
       </li>
     <% else %>
       <li>
-        <%= link_to 'Philosophy', :action=>'about' %>
+        <%= link_to('About Us', :action=>'about') %>
       </li>
     <% end %>
-    <li>
-      <%= link_to('Our People', :controller=>'people', :action=>'') %>
-    </li>
 
+    <% if controller.action_name=='philosophy' && controller.controller_name=='info' %>
+      <li id='current'>
+        <%= link_to('Our Philosophy', :action=>'philosophy') %>
+      </li>
+    <% else %>
+      <li>
+        <%= link_to('Our Philosophy', :action=>'philosophy') %>
+      </li>
+    <% end %>
+    <%if controller.action_name == 'people' && controller.controller_name=='info' %>
+
+      <li id='current'>
+        <%= link_to('Meet Our Staff',  :action=>'people') %>
+      </li>
+    <% else %>
+      <li>
+        <%= link_to('Meet Our Staff',  :action=>'people') %>
+      </li>
+    <% end %>
   </ul>
 
