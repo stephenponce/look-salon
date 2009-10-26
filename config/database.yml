@@ -22,8 +22,7 @@ test:
 
 production:
   adapter: mysql
-  encoding: utf8
   database: looksalonproduction
-  username: root
-  password: password
-  socket: /var/mysql/mysql.sock
+  username: look_admin
+  password: sandisk11
+  host:     mysql.thelook.dreamhosters.com
