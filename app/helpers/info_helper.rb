@@ -5,11 +5,17 @@ module InfoHelper
     case page
       when "index" then
          " <span class='teal_grey'>01. </span> Home "
-      when "about" || "philosophy" || "people" then
+      when "about" then
+         " <span class='teal_grey'>02. </span> About Us " 
+      when "philosophy" then
+         " <span class='teal_grey'>02. </span> About Us " 
+      when "people" then
          " <span class='teal_grey'>02. </span> About Us " 
       when "products" then
 	 " <span class='teal_grey'>03. </span> Products "
-      when "services" || "service_list" then
+      when "services" then
+         " <span class='teal_grey'>04. </span> Services "
+      when  "show_service" then
          " <span class='teal_grey'>04. </span> Services "
       when "promotions" then
 	 " <span class='teal_grey'>05. </span> Promotions "

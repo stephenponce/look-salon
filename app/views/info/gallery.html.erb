@@ -1,7 +1,9 @@
 <h2 class='heading'> Gallery </h2>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac felis sed ligula consectetur dapibus. 
+    Most of these people are guests from the Look who were so excited about their design from The Look, they volunteered to pose for photos.
+<!--    Everyone’s look is their own so you probably won’t see a design that is perfect for you in these pictures.  But these photos can begin to give you an idea of the range of talent and creativity found at The Look. -->
   </p>
+
   <div class='boxed'>
     <% for image in @images %>
       <%= link_to_remote image_tag(image.public_filename(:thumb), :height=>'100', :class=>'gallery'), 	
@@ -15,3 +17,8 @@
     <% end %>
   </div>
 
+  <div class='gallery_footer'>
+    Original Designs: <%=link_to 'The Look Salon', :controller=>'info', :action=>'index' %>
+    <br />
+    Photography: <a href="http://www.theimagery.net/" target="_blank">The Imagery</a>
+  </div>

@@ -1,0 +1,27 @@
+<ul>
+<li><h2> Admin Site </h2></li>
+<li>
+  <ul class='admin_quick_links'>
+    <li> <b>USER CONTROLLED </b></li>
+    <li>
+      <%= link_to 'New Announcement', :controller=>'posts', :action=>'new' %>
+    </li>
+    <li>
+      <%= link_to 'New Promo', :controller=>'promotions', :action=>'new' %>
+    </li>
+    <li>
+      <%= link_to 'Services', :controller=>'services', :action=>'index' %>
+    </li>
+    <li>
+      <%= link_to 'Products', :controller=>'products', :action=>'new' %>
+    </li>
+    <li>
+      <%= link_to 'Staff Bios', :controller=>'stylists', :action=>'index' %>
+    </li>
+    <li>
+      <%= link_to 'Photo Gallery', :controller=>'images', :action=>'index' %>
+    </li>
+  </ul>
+</li>
+</ul>
+

@@ -3,9 +3,9 @@
 one:
   name: Stylist Name1
   image_id: 1
-  message: Here is my message
+  bio: Here is my bio
 
 two:
   name: stylist name2
   image_id: 2
-  message: Hereisanothermessage
+  bio: Hereisanothermessage

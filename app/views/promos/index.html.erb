@@ -1,0 +1,28 @@
+<h1>Listing promos</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Code</th>
+    <th>Valid date</th>
+    <th>Is valid</th>
+    <th>Description</th>
+  </tr>
+
+<% for promos in @promos %>
+  <tr>
+    <td><%=h promos.title %></td>
+    <td><%=h promos.code %></td>
+    <td><%=h promos.valid_date %></td>
+    <td><%=h promos.is_valid %></td>
+    <td><%=h promos.description %></td>
+    <td><%= link_to 'Show', promos %></td>
+    <td><%= link_to 'Edit', edit_promos_path(promos) %></td>
+    <td><%= link_to 'Destroy', promos, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New promos', new_promos_path %>

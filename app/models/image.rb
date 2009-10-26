@@ -1,8 +1,6 @@
 class Image < ActiveRecord::Base
   has_one :stylist
 
-  has_one :image_tag
-
   has_attachment :content_type => :image,
                  :path_prefix => 'public/uploads',
                  :storage => :file_system,
@@ -21,7 +19,6 @@ class Image < ActiveRecord::Base
 
   def self.random
     Image.find_by_id rand(Image.count)+ 1
-   
   end
 
 end

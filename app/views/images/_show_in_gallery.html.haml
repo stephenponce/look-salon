@@ -1,0 +1,4 @@
+- if @image.show_in_gallery == true
+  = link_to_remote 'Hide from Gallery', :url=>{:action=>'hide_image', :id=>image}
+- else
+  = link_to_remote 'Show in Gallery', :url=>{:action=>'unhide_image', :id=>image}

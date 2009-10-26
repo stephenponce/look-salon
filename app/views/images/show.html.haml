@@ -1,20 +1,22 @@
-#center
-  .boxed
-    %h1.heading
-      Image Summary
-    %p
-      Position:
-      = @image.position
-    %p
-      -if @image 
-        = link_to image_tag(@image.public_filename(:thumb)), @image.public_filename 
-        %br
-        = @image.caption
-      - else 
-        missing image
-    %p
-      = link_to 'Edit', edit_image_path(@image) 
-      |
-      = link_to 'Back', images_path 
-      |
-      = link_to 'Sort', :controller=>'admin', :action=>'gallery'
+.post
+  %h2.subheader
+    Image:
+    = @image.filename
+  .entry
+    .entry_wrapper
+      = render :partial=> 'display', :locals=> { :image=>@image }
+    .image_location
+      Image Location:
+      %b
+      = render :partial=>'img_library', :locals=>{:image=>@image}
+.post
+  %h1.title_green
+    Image Libraries
+  .byline
+    Want to see more images...pick an Image Library to proceed
+  .entry
+    %ul.subheader
+      %li      
+        = link_to 'Display All', display_all_path
+      %li      
+        = link_to 'Photo Gallery', photo_gallery_path

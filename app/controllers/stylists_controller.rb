@@ -1,6 +1,6 @@
 class StylistsController < ApplicationController
   layout :choose_layout
-  active_scaffold :stylist
+
   # GET /stylists
   # GET /stylists.xml
   def index
@@ -47,7 +47,7 @@ class StylistsController < ApplicationController
     respond_to do |format|
       if @stylist.save
         flash[:notice] = 'Stylist was successfully created.'
-        format.html { redirect_to(@stylist) }
+        format.html { redirect_to :action=>'show', :id=>@stylist }
         format.xml  { render :xml => @stylist, :status => :created, :location => @stylist }
       else
         format.html { render :action => "new" }

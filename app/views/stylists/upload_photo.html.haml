@@ -1,0 +1,15 @@
+%p
+  %b
+    Name:
+  = h @stylist.name
+%p
+  %b
+    Image:
+  = h @stylist.image_id
+%p
+  %b
+    Message:
+  = h @stylist.message
+= link_to 'Edit', edit_stylist_path(@stylist)
+|
+= link_to 'Back', stylists_path

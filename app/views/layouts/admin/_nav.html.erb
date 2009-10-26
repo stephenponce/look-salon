@@ -1,41 +1,14 @@
-
-  <div id ='left'>
-        <ul id='navigation'>
-            <% if controller.action_name == 'panel' %>
-              <li class='current'> <%= link_to 'Admin Panel >', :controller=>'admin', :action=>'panel' %> </li>
-            <% else %>
-              <li> <%= link_to 'Panel', :controller=>'admin', :action=>'panel' %> </li>
-            <% end %>
-
-            <% if controller.action_name == 'gallery' %>
-              <li class='current'> <%= link_to 'Gallery', :controller=>'admin', :action=>'gallery' %> </li>
-            <% else %>
-              <li> <%= link_to 'Gallery', :controller=>'admin', :action =>'gallery' %> </li>
-            <% end %>
-           
-            <% if controller.controller_name=='services' %>
-              <li class='current'> <%= link_to 'Services >', :controller=>'admin', :action=>'services' %> </li>
-            <% else %>
-              <li> <%= link_to 'Services', :controller=>'admin', :action=>'services' %> </li>
-            <% end %>
-        
-            <% if controller.controller_name=='tags' %>
-              <li class='current'> <%= link_to 'Service Types >', :controller=>'admin', :action=>'service_types' %></li>
-            <% else %>
-              <li> <%= link_to 'Service Types', :controller=>'admin', :action=>'service_types' %></li>
-            <% end %>
-      
-            <% if controller.controller_name=='posts' %>
-              <li class='current'> <%= link_to 'Posts >', :controller=>'posts', :action=>'index' %> </li>
-            <% else %>
-              <li> <%= link_to 'Posts', :controller=>'posts', :action=>'index' %> </li>
-	    <% end %> 
-
-            <% if controller.controller_name=='stylists' %>    
-              <li class='current'> <%= link_to 'Staff Members', :controller=>'stylists', :action=>'index' %> </li>
-	    <% else %>
-              <li> <%= link_to 'Stylists', :controller=>'stylists', :action=>'index' %> </li>
-            <% end %>
-         </ul>
-    </div>
-
+<% pages= ["home", "gallery", "services", "service_types", "posts", "stylists"] %>
+<ul id='main'>
+  <% pages.each do |p| %>
+    <% if p==controller.action_name %>
+      <li id='current_page_item'> 
+        <%= p %>
+      </li>
+    <% else %>
+      <li>
+        <%= link_to p, :controller=>'admin', :action=>p %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>

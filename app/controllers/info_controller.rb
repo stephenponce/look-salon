@@ -32,8 +32,9 @@ class InfoController < ApplicationController
   end
  
   def services
-    @tags = Tag.find(:all)
-    @services = Service.find(:all)
+    redirect_to :action=>'show_service', :id=>1
+#    @tags = Tag.find(:all)
+#    @services = Service.find(:all)
   end
   def show_service
     @tags= Tag.find(:all)
@@ -41,7 +42,7 @@ class InfoController < ApplicationController
   end
 
   def gallery
-    @images = Image.find(:all, :conditions=> {:parent_id => nil})
+    @images = Image.find(:all, :conditions=> {:parent_id => nil, :stylist_id=> nil})
   end
   def people
     @images = Image.find(:all, :conditions=> {:parent_id => nil}, :limit=>3)

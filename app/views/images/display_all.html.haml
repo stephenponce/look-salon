@@ -1,0 +1,33 @@
+#center
+  .boxed
+    %h1.heading
+      Image Library
+    %h3.heading
+      = link_to '+ Add Image', new_image_path
+    %p
+      Use this to review all images uploaded to the Look Salon web application - including gallery & staff-member photos.
+      %p
+        %span.red
+          NOTE:
+        Any changes made here will be reflected on the live website.
+    %h1.heading
+      All Images
+
+    .gallery_wrapper
+      - for image in @images
+        .image_wrapper
+          .image_type
+            = render :partial=>'img_library', :locals=>{ :image => image}
+          .image
+            = image_tag(image.public_filename(:thumb), :height=>100)
+          %ul.actions
+            %li
+              = link_to ('Show', :action=>'show', :id => image) 
+            %li
+              = link_to ('Edit', :action=>'edit', :id => image) 
+            %li
+              = link_to ('Delete', image, :confirm=>"Are you sure?", :method => :delete ) 
+
+    %p
+      To review all photos, including those that do not appear in the web gallery click 
+      = link_to 'here', :controller=> 'images', :action=>'display_all'

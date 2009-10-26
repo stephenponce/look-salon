@@ -1,0 +1,35 @@
+.display_wrapper
+  .display_image_wrapper
+    .display_image
+      = image_tag(@image.public_filename(:thumb))
+    .actions_wrapper
+      %h3.header
+        = link_to 'Edit', edit_image_path(@image)
+        |
+        = link_to 'Delete',  @image, :confirm=>'Are you sure?', :method=> :delete
+        |
+        = render :partial=>'show_in_gallery', :locals => { :image => @image }
+  .display_image_details_wrapper
+    %h2.subheader
+      Details
+    Dimensions[WxH]:
+    %br
+    %b
+      = @image.width
+      x
+      = @image.height
+      px
+    %br
+    - if @image.caption != ""
+      Caption:
+      =@image.caption
+    %br
+    Display in Gallery?
+    %b
+    - if @image.show_in_gallery 
+      Yes
+    - else
+      No
+      - if @image.stylist_id != nil
+        = render :partial=>'staff_profile', :locals=>{:image => @image}
+

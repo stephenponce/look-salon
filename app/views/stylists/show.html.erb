@@ -4,15 +4,11 @@
 </p>
 
 <p>
-  <b>Image:</b>
-  <%=h @stylist.image_id %>
-</p>
-
-<p>
-  <b>Message:</b>
-  <%=h @stylist.message %>
+  <b>bio:</b>
+  <%=h @stylist.bio %>
 </p>
 
 
+<%= link_to 'Upload Image', :controller=>'images', :action=>'staff_profile' %> |
 <%= link_to 'Edit', edit_stylist_path(@stylist) %> |
 <%= link_to 'Back', stylists_path %>

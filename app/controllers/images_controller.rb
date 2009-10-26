@@ -2,11 +2,29 @@ class ImagesController < ApplicationController
   layout :choose_layout
   active_scaffold :post
 
+  def hide_image
+    i = Image.find(params[:id])
+#    i.show_in_gallery = false
+
+    render(:update) { |page| page.send_confirmation_message }
+  end
+
+  def unhide_image
+    i = Image.find(params[:id])
+#    i.show_in_gallery = false
+
+    render(:update) { |page| page.send_confirmation_message }
+  end
+
+  def display_all
+    @images = Image.find(:all, :conditions=>{:parent_id=> nil}, :order=>'position, created_at DESC')
+  end
+
   # GET /images
   # GET /images.xml
   def index
     #this ensures that only the original images are chosen and excludes the thumbnails
-    @images = Image.find(:all, :conditions=> {:parent_id => nil} , :order=>'position, created_at DESC')
+    @images = Image.find(:all, :conditions=> {:parent_id => nil, :stylist_id=> nil} , :order=>'position, created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -36,6 +54,13 @@ class ImagesController < ApplicationController
       format.xml  { render :xml => @image }
     end
   end
+  def staff_profile
+    @stylist = Stylist.find(params[:id])    
+    @image = Image.new do |i|
+      i.stylist_id = params[:id]
+      i.show_in_gallery = false
+    end
+  end
 
   # GET /images/1/edit
   def edit
@@ -46,12 +71,18 @@ class ImagesController < ApplicationController
   # POST /images.xml
   def create
     @image = Image.new(params[:image])
-    
+    if params[:caption] == 'enter new caption...'
+      @image.caption=""
+    end
     respond_to do |format|
       if @image.save
         flash[:notice] = 'Image was successfully created.'
-        format.html { redirect_to(:controller=>'admin', :action=>'gallery') }
-        format.xml  { render :xml => @image, :status => :created, :location => @image }
+        if @stylist!=nil
+          format.html { redirect_to(:controller=>'stylists', :action=>'index') }
+        else
+          format.html { redirect_to(:controller=>'admin', :action=>'gallery') }
+          format.xml  { render :xml => @image, :status => :created, :location => @image }
+        end
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @image.errors, :status => :unprocessable_entity }

@@ -1,19 +1,27 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :promos
+
 
 # A bunch of admin re-routing to the actual controllers
   map.connect 'admin/', :controller=>'admin', :action=>'panel'
+  map.connect 'admin/home', :controller=>'admin', :action=>'panel'
   map.connect 'admin/index', :controller=>'admin', :action=>'panel'
   map.connect 'admin/panel', :controller=>'admin', :action=>'panel'
-  map.connect 'admin/gallery', :controller=>'images', :action=>'index'
+  map.photo_gallery 'admin/gallery', :controller=>'images', :action=>'index'
+  map.connect 'admin/stylists', :controller=>'stylists', :action=>'index'
   map.connect 'admin/services', :controller=>'services', :action=>'index'
   map.connect 'admin/service_types', :controller=>'tags', :action=>'index'
-  map.connect 'admin/posts', :controller=>'posts', :index=>'index'
+  map.connect 'admin/posts', :controller=>'posts', :action=>'index'
 
+  map.staff_profile 'image/staff_profile/:id', :controller=>'images', :action=>'staff_profile'
+  map.display_all 'image/display_all', :controller=>'images', :action=>'display_all'
   map.connect 'info/home', :controller=>'info', :action=>'index'
 
+
+
   # used to redirect pages that are not production ready
-  map.connect 'info/products', :controller=>'info', :action=>'coming_soon'
-  map.connect 'info/appointments', :controller=>'info', :action=>'coming_soon'
+  #map.connect 'info/products', :controller=>'info', :action=>'coming_soon'
+  #map.connect 'info/appointments', :controller=>'info', :action=>'coming_soon'
 
   # map.with_options :controller=>'info' do |i|
   #  i.products '/info/coming_soon', :action=>'products'
@@ -29,7 +37,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :images
 
-  map.resources :stylists, :active_scaffold => true
+  map.resources :stylists, :has_many=> :images
 
   # The priority is based upon order of creation: first created -> highest priority.
 

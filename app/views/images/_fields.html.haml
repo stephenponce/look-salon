@@ -1,0 +1,16 @@
+%tr
+  %td 
+    Caption:
+  %td 
+    = f.text_field :caption, :value=>"enter new caption..."
+%tr
+  %td 
+    Show in Gallery:
+  %td 
+    = f.check_box :show_in_gallery
+%tr.bottomrow
+  %td 
+    = link_to '<< Cancel', :back
+  %td 
+  %td 
+    = f.submit "Submit" 

@@ -1,0 +1,35 @@
+#post
+  %h1.title
+    Profile Photo
+  %p.byline
+  .entry
+    %h1.heading
+      = @stylist.name
+    %p
+      = @stylist.bio
+    %table.new
+      - form_for(:image, :url=> images_path, :html=> {:multipart => true}) do |f|
+        %tr
+          %td 
+            = f.error_messages
+        %tr
+          %td 
+            Filename (images only): 
+          %td 
+            = f.file_field :uploaded_data 
+        %tr.hidden
+          %td 
+            Stylist ID
+          %td 
+            = f.text_field :stylist_id
+        %tr.hidden
+          %td 
+            Add to Photo Gallery
+          %td 
+            = f.check_box :show_in_gallery
+        %tr.bottomrow
+          %td 
+            = f.submit "Add" 
+
+    %p
+      = link_to '<< Cancel', :controller=>'stylist', :action=>'show', :id=>@stylist

@@ -5,10 +5,9 @@
 
 body {
 	background-color:black;
-	font-family: Arial, Helvetica, san-serif;
 	/*OLD font-family: Georgia, Palantino, Times New Roman, serif;*/
 	font-size: 13px;
-	color: #666666;
+	color:#AAAAAA;
 }
 
 h1{
@@ -44,8 +43,10 @@ img.gallery{
 	letter-spacing: 1px;
 	font-size: 16px;
 	font-weight:lighter;
-	border-bottom:1px solid #FFF;
+	border-bottom:1px solid #1B1E1F;
 	color:#427785;
+	margin-bottom:4px;
+	padding-bottom:2px;
 }
 .subheading{
 	text-transform: uppercase;
@@ -68,4 +69,16 @@ img.gallery{
 .heading a{
 	text-decoration:none;
 	color:#427785;
+}
+.gallery_footer{
+	margin:0px;
+	padding:0px;
+	font-size:10px;
+}
+.gallery_footer a{
+	text-decoration:none;
+	color:#427785;
+}
+.gallery_footer a:hover{
+	text-decoration:underline;
 }

@@ -16,9 +16,10 @@ class StylistsControllerTest < ActionController::TestCase
     assert_difference('Stylist.count') do
       post :create, :stylist => { }
     end
-
-    assert_redirected_to stylist_path(assigns(:stylist))
+   
+    assert_response :redirect
   end
+
 
   test "should show stylist" do
     get :show, :id => stylists(:one).id

@@ -1,5 +1,5 @@
 #wrapper{
-	height:1000px;
+//	height:1000px;
         margin:auto;
 	width:900px;
 	padding:5px;
@@ -211,10 +211,14 @@ ul.second_nav li#current a{
 	color:#872019;
 }
 ul.second_nav li a{
-	color:white;
+//#AAAAAA
+//	border: 2px solid #1b1e1f;
+
+	color:#1B1E1F;
 	font-variant:small-caps;
 	text-decoration:none;
 }
 ul.second_nav li a:hover{
 	text-decoration:underline;
+	color:#AAAAAA;
 }

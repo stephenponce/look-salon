@@ -1,24 +1,27 @@
-<h1>Listing stylists</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Image</th>
-    <th>Message</th>
-  </tr>
+<h2 class='title'>Look Salon Stylists</h2>
+
+<%= link_to '+New stylist', new_stylist_path %>
 
 <% for stylist in @stylists %>
-  <tr>
-    <td><%=h stylist.name %></td>
-    <td><%=h stylist.image_id %></td>
-    <td><%=h stylist.message %></td>
-    <td><%= link_to 'Show', stylist %></td>
-    <td><%= link_to 'Edit', edit_stylist_path(stylist) %></td>
-    <td><%= link_to 'Destroy', stylist, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <div class='post'>
+    <h2> <%=h stylist.name %></h2>
+    <p class='byline'> Last Updated:<%=h stylist.updated_at %></p>
+    <div class='entry'>
+      <div class='bio_wrapper'>
+        <h3>Bio:</h3>
+        <p><%= stylist.bio %></p>
+      </div>
+      <div class='staff_photo_wrapper'>
+
+      </div>
+      <div class='entry_links'>
+        <%= link_to "Show", stylist %> | 
+        <%= link_to 'Edit', edit_stylist_path(stylist) %> | 
+        <%= link_to 'Destroy', stylist, :confirm => 'Are you sure?', :method => :delete %>
+      </div>
+    </div>
+  </div>
+
 <% end %>
-</table>
 
-<br />
-
-<%= link_to 'New stylist', new_stylist_path %>

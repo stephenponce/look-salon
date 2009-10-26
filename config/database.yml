@@ -5,8 +5,9 @@ development:
   encoding: utf8
   database: looksalondevelopment
   username: root
+  socket: /Applications/MAMP/tmp/mysql/mysql.sock
+  username: root
   password: password
-  socket: /var/mysql/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

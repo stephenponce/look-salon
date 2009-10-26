@@ -1,0 +1,28 @@
+<p>
+  <b>Title:</b>
+  <%=h @promos.title %>
+</p>
+
+<p>
+  <b>Code:</b>
+  <%=h @promos.code %>
+</p>
+
+<p>
+  <b>Valid date:</b>
+  <%=h @promos.valid_date %>
+</p>
+
+<p>
+  <b>Is valid:</b>
+  <%=h @promos.is_valid %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @promos.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_promos_path(@promos) %> |
+<%= link_to 'Back', promos_path %>

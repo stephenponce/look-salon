@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090415030410) do
+ActiveRecord::Schema.define(:version => 20091024233027) do
 
   create_table "images", :force => true do |t|
     t.string   "filename"
@@ -24,7 +24,9 @@ ActiveRecord::Schema.define(:version => 20090415030410) do
     t.string   "location"
     t.string   "caption"
     t.integer  "position"
-    t.boolean  "is_visible"
+    t.integer  "stylist_id"
+    t.string   "image_type"
+    t.boolean  "show_in_gallery", :default => true, :null => false
   end
 
   create_table "posts", :force => true do |t|
@@ -33,6 +35,16 @@ ActiveRecord::Schema.define(:version => 20090415030410) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "post_type"
+  end
+
+  create_table "promos", :force => true do |t|
+    t.string   "title"
+    t.string   "code"
+    t.date     "valid_date"
+    t.boolean  "is_valid"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "services", :force => true do |t|
@@ -46,10 +58,11 @@ ActiveRecord::Schema.define(:version => 20090415030410) do
 
   create_table "stylists", :force => true do |t|
     t.string   "name"
-    t.integer  "image_id"
-    t.string   "message"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "bio"
+    t.string   "title"
+    t.integer  "image_id"
   end
 
   create_table "tags", :force => true do |t|

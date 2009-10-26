@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @stylist.name %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <% render :partial=>'image_upload' :locals=>{:stylist=>@stylist, :image=>@image} %>
+</p>
+
+<p>
+  <b>bio:</b>
+  <%=h @stylist.bio %>
+</p>
+
+
+<%= link_to 'Edit', edit_stylist_path(@stylist) %> |
+<%= link_to 'Back', stylists_path %>

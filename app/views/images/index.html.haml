@@ -1,37 +1,31 @@
 #center
   .boxed
     %h1.heading
-      Gallery Panel
+      Photo Gallery 
+    %h3.heading
+      = link_to '+ Upload New Image', new_image_path
     %p
-      From this page you can make any changes to your web gallery
-    %h3.heading
-      Quick Links
-    %ul.actions
-      %li
-        = link_to 'Add Image', new_image_path
-      %li
-        = link_to 'Sort Images', :controller=>'admin', :action=>'sort_images'
+      Use this tool to make LIVE updates to your Photo Gallery below. You can create, edit and delete photos from this panel. 
+      %p
+        %span.red
+          NOTE:
+        Any changes made here will be reflected on the live website.
+    %h1.heading
+      Gallery Preview
 
-    %h3.heading
-      Gallery
-    %table
-      %tr
-        %th
-          Order
-        %th
-          Actions
-        %th
-          Image
+    .gallery_wrapper
       - for image in @images
-        %tr
-          %td
-            = image.position
-          %td
-            = link_to ('Edit', :action=>'edit', :id=> image )
-            = link_to ('Delete', image, :confirm=>"Are you sure?", :method => :delete ) 
-          %td
-            = link_to (image_tag(image.public_filename(:thumb)), image.public_filename, :target=>:blank) 
-            %br
-            %p
-              = image.caption
+        .image_wrapper
+          .image
+            = image_tag(image.public_filename(:thumb), :height=>100)
+          %ul.actions
+            %li
+              = link_to ('Show', :action=>'show', :id => image) 
+            %li
+              = link_to ('Edit', :action=>'edit', :id => image) 
+            %li
+              = link_to ('Delete', image, :confirm=>"Are you sure?", :method => :delete ) 
 
+    %p
+      To review all photos, including those that do not appear in the web gallery click 
+      = link_to 'here', :controller=> 'images', :action=>'display_all'

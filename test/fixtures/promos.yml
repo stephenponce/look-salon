@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  code: MyString
+  valid_date: 2009-10-24
+  is_valid: false
+  description: MyText
+
+two:
+  title: MyString
+  code: MyString
+  valid_date: 2009-10-24
+  is_valid: false
+  description: MyText
