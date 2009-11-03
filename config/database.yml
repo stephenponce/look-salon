@@ -23,6 +23,5 @@ test:
 production:
   adapter: mysql
   database: looksalonproduction
-  username: look_admin
-  password: sandisk11
-  host:     mysql.thelook.dreamhosters.com
+  username: root
+  password: looksalon003
