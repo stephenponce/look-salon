@@ -1,12 +1,22 @@
-set :application, "thelooksalon"
-set :user, "thelookadmin"
-set :domain, "penguin.dreamhost.com"
-set :applicationdir, "/home/thelookadmin/thelook.dreamhosters.com/looksalon"
+#set :domain, "thelooksalonmn.com"
+set :domain, "67.23.0.21"
+set :application, domain
+set :user, "looksalon"
+set :applicationdir, "/home/looksalon/public_html/#{domain}"
 
 default_run_options[:pty] = true
 
 set :scm, :git
-set :repository,  " git@github.com:stephenponce/look-salon.git"
+
+#pulls from Slicehost, looksalon user account
+#set :repository, "ssh://looksalon@67.23.0.21/repos/look-salon.git"
+
+# pulls from Slicehost, git-user account * does NOT work with master branch
+#set :repository, "git@67.23.0.21/git/look-salon.git"
+
+#Pulls from github
+set :repository, "git@github.com:stephenponce/look-salon.git"
+
 set :branch, 'master'
 set :scm_verbose, true
 set :git_shallow_clone, 1
