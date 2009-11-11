@@ -11,6 +11,8 @@ module InfoHelper
          " <span class='teal_grey'>02. </span> About Us " 
       when "people" then
          " <span class='teal_grey'>02. </span> About Us " 
+      when "staff" then
+         " <span class='teal_grey'>02. </span> About Us " 
       when "products" then
 	 " <span class='teal_grey'>03. </span> Products "
       when "services" then

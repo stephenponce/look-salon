@@ -19,8 +19,7 @@
         <%= link_to('Our Philosophy', :action=>'philosophy') %>
       </li>
     <% end %>
-    <%if controller.action_name == 'people' && controller.controller_name=='info' %>
-
+    <%if controller.action_name == 'people' || controller.action_name=='staff' %>
       <li id='current'>
         <%= link_to('Meet Our Staff',  :action=>'people') %>
       </li>

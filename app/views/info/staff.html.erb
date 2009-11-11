@@ -10,16 +10,16 @@
   </p>
 <div class='boxed'>
   <h3 class='subheading'>
-      Staff Bios
+      <%=h @stylist.name %>
   </h3>
-  <div id='current_bio'>
+  <div class='profile'>
+    <div class='title'>
+      <%=h @stylist.professional_title %>
+    </div>
+    <p class='bio'>
+      <%=h @stylist.bio %>
+    </p>
   </div>
-  <ul class='stylist_roster'>
-    <% for s in @stylist_roster %>
-        <li class='full_profile'>
-          <%= render :partial=>'full_profile', :locals=>{:s=>s}%>
-       </li>
-    <% end %>
-  </ul>
+<div class='back_link'>
+  <%= link_to '<< Back', :controller=>'info', :action=>'people' %>
 </div>
-

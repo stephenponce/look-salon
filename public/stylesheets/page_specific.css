@@ -92,10 +92,12 @@ ul.stylist_roster li.full_profile{
 	padding:4px;
 }
 li.full_profile a{
-	font-style:bold;
+	margin:0px;
+	letter-spacing:0px;
+	display:inline;
+	color:#427785;
 	text-decoration:none;
-	text-transform:uppercase;
-       color:#b4bec1;
+	font-weight:bold;
 /* NEED TO REPLACE THE COLOR HERE */
 }
 .full_profile a:hover{

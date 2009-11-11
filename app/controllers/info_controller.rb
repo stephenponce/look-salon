@@ -49,7 +49,7 @@ class InfoController < ApplicationController
     @stylist_roster = Stylist.find(:all)
     
   end
-  def staff_profile
+  def staff
     @stylist = Stylist.find(params[:id])
   end
 
