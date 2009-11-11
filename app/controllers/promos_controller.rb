@@ -1,4 +1,36 @@
 class PromosController < ApplicationController
+
+  layout 'admin'
+
+  active_scaffold :promos do |config|
+    config.columns.exclude :valid_date, :hidden_promo
+    config.columns = [:display_status, :title, :description, :restrictions, :code]
+    config.label="Promotional Ads"
+
+    #FORM_UI 
+    config.columns[:description].form_ui = :textarea 
+    config.columns[:restrictions].form_ui = :textarea
+
+    #LABELS
+    config.columns[:display_status].label="Active"
+    config.columns[:title].label="Title"
+    config.columns[:description].label="Details"
+    config.columns[:code].label="Promo Code"
+    
+    #FIELD DESCRIPTIONS
+    config.columns[:display_status].description="Select true to display on web."
+    config.columns[:title].description = "Ex: Fall Special on Nails"
+    config.columns[:description].description="Ex: During November get 50% of any manicures"
+    config.columns[:restrictions].description="Ex: Promotion valid through 11/30/2009."
+    config.columns[:code].description="Ex: TLS Web (Optional)"
+
+#    config.columns = [:title, :price_range, :tag]
+#    list.sorting = {:tag => 'ASC'}
+  end
+
+
+end
+class OldPromosController
   # GET /promos
   # GET /promos.xml
   def index

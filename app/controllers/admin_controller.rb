@@ -3,7 +3,7 @@ class AdminController < ApplicationController
 
   layout 'admin'
 
-  def panel
+  def bulletin_board
   end
 
   def posts

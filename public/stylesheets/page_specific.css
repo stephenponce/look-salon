@@ -1,0 +1,204 @@
+/* SHARED ACROSS SITE */
+.subheading{
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 16px;
+        font-weight:lighter;
+        color:#b4bec1;
+	border-bottom:1px solid #2A373D;
+
+       margin-bottom:4px;
+        padding-bottom:2px;
+}
+
+/* HOME PAGE */
+.bb_post{
+	clear:both;
+	padding:10px;
+	border-bottom:1px dotted #1B1E1F;
+	margin-bottom:5px;
+	margin-top:5px;
+	padding-bottom:10px;
+}
+.bb_post .bb_small_image{
+	width:115px;
+	float:left;
+	margin-right:5px;
+}
+.bb_post .bb_title{
+        letter-spacing: 1px;
+	min-height:50px;
+	height:60px;
+	padding:5px;
+	padding-top:10px;
+}
+.bb_post .bb_title a{
+	margin:0px;
+	letter-spacing:0px;
+	display:inline;
+	color:#427785;
+	text-decoration:none;
+	font-weight:bold;
+}
+/* GALLERY PREVIEW (Landing Page) */
+.main_photo{
+	float:left;
+	margin-right:10px;
+}
+table#gallery_preview{
+}
+table#gallery_preview tr{
+}
+table#gallery_preview tr td{
+}
+table#small_preview{
+	margin-left:10px;
+	padding-top:4px;
+}
+table#small_preview td{
+	padding:4px;
+	border:2px solid #427785;
+	text-align:center;
+	width:50px;
+	height:50px;
+	overflow:hidden;
+}
+/* GALLERY PAGE */
+.gallery_footer{
+        margin:0px;
+        padding:0px;
+        font-size:10px;
+}
+.gallery_footer a{
+        text-decoration:none;
+        color:#427785;
+}
+.gallery_footer a:hover{
+        text-decoration:underline;
+}
+img.gallery{
+	color:#0D0E10;
+}
+
+/* ABOUT US PAGE */
+ul.stylist_roster{
+        margin:0px;
+        padding:0px;
+}
+ul.stylist_roster li.full_profile{
+        margin:0px;
+        padding:0px;
+        list-style-type:none;
+	padding:4px;
+}
+li.full_profile a{
+	font-style:bold;
+	text-decoration:none;
+	text-transform:uppercase;
+       color:#b4bec1;
+/* NEED TO REPLACE THE COLOR HERE */
+}
+.full_profile a:hover{
+	text-decoration:underline;
+}
+ul.professional_guide{
+        margin-top:5px;
+        margin-bottom:15px;
+}
+ul.professional_guide li{
+        list-style-type:square;
+	
+	padding-left: 10px;
+	background-image: url('images/red_arrow.jpg');
+	background-repeat: no-repeat;
+	background-position: 0 .5em;
+
+        margin-left:10px;
+}
+#development_path h3{
+        text-transform: uppercase;
+        font-size:12px;
+}
+
+/* PROMOTIONS PAGE */
+.promo_heading{
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 16px;
+        font-weight:lighter;
+        border-bottom:1px solid #1B1E1F;
+        color:#427785;
+        margin-bottom:4px;
+        padding-bottom:2px;
+        
+}
+
+ul.promotionals{
+        margin-top:5px;
+        margin-bottom:15px;
+}
+li.promo{
+        list-style-type:none;
+}
+.promotional_details{
+        margin:0px
+        margin-left:10px;
+        margin-bottom:15px;
+        border-bottom:1px dotted white;
+}
+p.restrictions{
+        margin:0px;
+        margin-top:3px;
+        font-style:italics;
+}
+.promo_footer{
+        font-size:10px;
+}
+
+/* SERVICES PAGE */
+ul#service_menu{
+	width:300px;
+}
+ul#service_menu li{
+	font-size:14px;
+	font-variant:small-caps;
+	margin-bottom:4px;
+	list-style-type:square;
+}
+ul#service_menu li a{
+	color:#999;
+	text-decoration:none;
+}
+ul#service_menu li a:hover{
+	color:#ddd;
+	font-variant:uppercase;
+}
+table.service-wrapper{
+	width:450px;
+	padding:10px;
+}
+table.service-wrapper tr{
+	margin-bottom:10px;
+
+}
+table.service-wrapper th{
+	font:14px;
+	line-height:175%;
+	font-weight:bold;
+	font-variant:small-caps;
+	text-align:left;
+	border-bottom:thin solid white;
+	color:#B4BEC1;
+}
+
+
+.service_footer{
+	margin-top:20px;
+}
+#promotions{
+        margin:0px;
+        padding:0px;
+        margin-top:5px;
+        padding-top:10px;
+}
+

@@ -31,13 +31,9 @@ a {
 a:hover {
 	text-decoration: none;
 }
-img.gallery{
-	color:#427785;
-}
 .boxed {
 	margin-bottom:20px;
 }
-
 .heading {
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -47,14 +43,6 @@ img.gallery{
 	color:#427785;
 	margin-bottom:4px;
 	padding-bottom:2px;
-}
-.subheading{
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	font-size: 12px;
-	border-bottom:1px dotted #FFF;
-	color:#427785;
-
 }
 .white{
 	color:#b4bec1;
@@ -70,15 +58,4 @@ img.gallery{
 	text-decoration:none;
 	color:#427785;
 }
-.gallery_footer{
-	margin:0px;
-	padding:0px;
-	font-size:10px;
-}
-.gallery_footer a{
-	text-decoration:none;
-	color:#427785;
-}
-.gallery_footer a:hover{
-	text-decoration:underline;
-}
+

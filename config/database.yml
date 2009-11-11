@@ -15,10 +15,11 @@ development:
 test:
   adapter: mysql
   encoding: utf8
-  database: looksalontest
+  database: looksalondevelopment
+  username: root
+  socket: /Applications/MAMP/tmp/mysql/mysql.sock
   username: root
   password: password
-  socket: /var/mysql/mysql.sock
 
 production:
   adapter: mysql

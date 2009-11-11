@@ -41,9 +41,10 @@
     <% end %>
 <!-- APPOINTMENTS -->
     <% if action_name == 'appointments' || action_name == 'show_appointments' %>
-	  <li id='nav_appointments' > <%= link_to image_tag("nav/new/appointments_small_on.jpg"),:controller=>'info', :action=>'appointments' %> </li>
+	  <li id='nav_appointments' > <%= link_to image_tag("nav/new/appointments_small_on.jpg"), :controller=>'info', :action=>'appointments' %> </li> 
+<!--	  <li id='nav_appointments' > <%= link_to image_tag("nav/new/appointments_small_on.jpg"), :controller=>'info', :action=>'appointments' %> </li> -->
     <% else %>
-	  <li id='nav_appointments' > <%= link_to image_tag("nav/new/appointments_small_off.jpg", :onmouseover=>"this.src='/images/nav/new/appointments_small_on.jpg'", :onmouseout=>"this.src='/images/nav/new/appointments_small_off.jpg'"  ), :controller=>'info', :action=>'appointments' %> </li>
+	  <li id='nav_appointments' > <%= link_to image_tag("nav/new/appointments_small_off.jpg", :onmouseover=>"this.src='/images/nav/new/appointments_small_on.jpg'", :onmouseout=>"this.src='/images/nav/new/appointments_small_off.jpg'"  ), :controller=>'info', :action=>'appointments' %> </li> 
     <% end %>
 
 <!-- CONTACT -->

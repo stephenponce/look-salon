@@ -1,0 +1,14 @@
+- if current_page?(:controller=>'info', :action=>'about')
+  = image_tag('/uploads/main2.jpg')
+
+- if current_page?(:controller=>'info', :action=>'services')
+  = image_tag('/uploads/main3.jpg')
+
+- if current_page?(:controller=>'info', :action=>'show_service')
+  = image_tag('/uploads/main2.jpg')
+
+- if current_page?(:controller=>'info', :action=>'gallery')
+  = image_tag('new_logo2.jpg')
+- else
+  = image_tag('new_logo1.jpg')
+

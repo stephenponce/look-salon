@@ -1,16 +1,29 @@
 <div class='boxed'>
-  <h2 class='heading'> Your Image is Unique and Beautiful</h2>
-  <div class='boxed'>
-    <% for image in @images %>
-      <%= link_to_remote image_tag(image.public_filename(:thumb), :height=>'100', :class=>'gallery'),
-                :url=> { :action=>'show_image_ajax', :id=>image },
-                :onclick =>"new Effect.Fade('image_wrapper');",
-                :complete=> "new Effect.Blinddown('image_wrapper', {duration:1.0})" %>
-<!---           :update=> {:success=>'image_wrapper', :failure=>'err    ors' },
-                :loading=> "$('image_wrapper').hide(); $('ajax_indicator').show();",
-                :complete=> "$('ajax_indicator').hide(); visual_effect(:toggle_appear)" %>
---->
+  <table id='gallery_preview'>
+   <tr>
+    <td>
+      <%= link_to image_tag(main.public_filename(:thumb), :height=>'211', :class=>'gallery'), :action=>'gallery' %>
+    </td>
+    <td>
+    <table id='small_preview'>
+    <% count=0 %>
+    <% for image in images %>
+      <%if count==0 || count ==2 %>
+        <tr>
+          <td> 
+            <%= link_to image_tag(image.public_filename(:thumb), :height=>'100',  :class=>'gallery'), :action=>'gallery' %>
+          </td> 
+      <% else %>
+          <td>
+            <%= link_to image_tag(image.public_filename(:thumb), :height=>'100',  :class=>'gallery'), :action=>'gallery' %>
+          </td>
+        </tr>
+      <% end %>
+    <% count=count+1 %>
     <% end %>
-  </div>
+    </table>
+    </td>
+   </tr>   
+  </table>
 </div>
 

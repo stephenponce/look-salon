@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091024233027) do
+ActiveRecord::Schema.define(:version => 20091109041837) do
 
   create_table "images", :force => true do |t|
     t.string   "filename"
@@ -34,7 +34,8 @@ ActiveRecord::Schema.define(:version => 20091024233027) do
     t.string   "body"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "post_type"
+    t.boolean  "display"
+    t.string   "url"
   end
 
   create_table "promos", :force => true do |t|
@@ -45,6 +46,10 @@ ActiveRecord::Schema.define(:version => 20091024233027) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "restrictions"
+    t.boolean  "display_status"
+    t.integer  "service_id"
+    t.boolean  "hidden_promo"
   end
 
   create_table "services", :force => true do |t|
@@ -63,6 +68,7 @@ ActiveRecord::Schema.define(:version => 20091024233027) do
     t.text     "bio"
     t.string   "title"
     t.integer  "image_id"
+    t.string   "professional_title"
   end
 
   create_table "tags", :force => true do |t|

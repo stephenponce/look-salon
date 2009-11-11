@@ -4,10 +4,24 @@ class InfoControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
+    assigns["posts"]
+    assigns["images"]
   end
 
   test "should get about" do
     get :about
+    assert_response :success
+  end
+  test "should get philosophy" do
+    get :philosophy
+    assert_response :success
+  end
+  test "should get staff" do
+    get :people
+    assert_response :success
+  end
+  test "should get page unavailable" do 
+    get :products
     assert_response :success
   end
 
@@ -21,12 +35,6 @@ class InfoControllerTest < ActionController::TestCase
     assert_response :success
     assert_not_nil assigns(:services)
   end
-
-  test "should get products" do
-    get :products
-    assert_response :successs, "Products page not found"
-  end
-
   test "should get promotions" do
     get :promotions
     assert_response :success

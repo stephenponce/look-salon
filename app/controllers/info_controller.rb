@@ -9,11 +9,12 @@ class InfoController < ApplicationController
   end
 
   def index
-    @posts=Post.find(:all, :limit=>3)
+    logger.info params.inspect
 
-    @main_post = @posts[0]
+    @posts=Post.find(:all, :limit=>2)
 
-    @images = Image.find(:all, :limit=>5, :conditions=> {:parent_id => nil})
+    @images = Image.find(:all, :limit=>4, :conditions=> {:parent_id => nil})
+    @main_image=@images[0]
 
     respond_to do |format|
       format.html #index.html.erb
@@ -45,7 +46,17 @@ class InfoController < ApplicationController
     @images = Image.find(:all, :conditions=> {:parent_id => nil, :stylist_id=> nil})
   end
   def people
-    @images = Image.find(:all, :conditions=> {:parent_id => nil}, :limit=>3)
+    @stylist_roster = Stylist.find(:all)
+    
   end
+  def staff_profile
+    @stylist = Stylist.find(params[:id])
+  end
+
+  def promotions
+
+    @promos = Promo.find(:all, :conditions=>{:display_status => true},:limit=>4)
+  end
+
   
 end

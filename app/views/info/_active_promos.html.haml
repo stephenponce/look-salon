@@ -1,0 +1,12 @@
+
+%ul.promotionals
+- for p in promos
+  %li.promo
+    %h3.promo_heading
+      = p.title
+    .promotional_details
+      = p.description
+      %p.restrictions
+        =p.restrictions
+
+

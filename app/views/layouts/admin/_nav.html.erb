@@ -1,13 +1,13 @@
-<% pages= ["home", "gallery", "services", "service_types", "posts", "stylists"] %>
+<% pages= [ "bulletin_board", "promos", "gallery", "services", "service_types", "stylists"] %>
 <ul id='main'>
   <% pages.each do |p| %>
-    <% if p==controller.action_name %>
+    <% if current_page?(:controller=>'admin', :action=>p) %>
       <li id='current_page_item'> 
-        <%= p %>
+        <%= link_to p.tr_s("_", " ") %>
       </li>
     <% else %>
       <li>
-        <%= link_to p, :controller=>'admin', :action=>p %>
+        <%= link_to p.tr_s("_", " "), :controller=>'admin', :action=>p %>
       </li>
     <% end %>
   <% end %>

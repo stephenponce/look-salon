@@ -8,16 +8,22 @@
   <p>
     Our wide range of unique talents help you find the designer right for your personal look.
   </p>
-  <div class='boxed'>
-    <% for image in @images %>
-      <%= link_to_remote image_tag(image.public_filename(:thumb), :height=>'100', :class=>'gallery'), 	
-		:url=> { :action=>'show_image_ajax', :id=>image },
-		:onclick =>"new Effect.Fade('image_wrapper');",
-		:complete=> "new Effect.Blinddown('image_wrapper', {duration:1.0})" %>
-<!---		:update=> {:success=>'image_wrapper', :failure=>'err	ors' },
-		:loading=> "$('image_wrapper').hide(); $('ajax_indicator').show();", 
-		:complete=> "$('ajax_indicator').hide(); visual_effect(:toggle_appear)" %>
---->
+<div class='boxed'>
+  <h3 class='subheading'>
+      Staff Bios
+  </h3>
+  <ul class='stylist_roster'>
+    <% for s in @stylist_roster %>
+      <% if s.professional_title != nil %>
+        <li class='full_profile'>
+          <%= render :partial=>'full_profile', :locals=>{:s=>s}%>
+       </li>
+      <% else %>
+        <li class='full_profile'>
+          <%= render :partial=>'abbrev_profile', :locals=>{:s=>s} %>
+       </li>
+     <% end %>
     <% end %>
-  </div>
+  </ul>
+</div>
 

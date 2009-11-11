@@ -1,0 +1,26 @@
+<% page = controller.action_name %>
+<% if controller.controller_name == 'info' %>
+
+  <% if page =='home' || page == 'index' || page=='coming_soon' %>
+    <%= image_tag('new_logo1.jpg') %>
+  
+  <% end %>  
+  <% if page =='about' %>
+    <%= image_tag('/uploads/main2.jpg') %>
+
+  <% end %>  
+  <% if page == 'services' %>
+    <%= image_tag('/uploads/main3.jpg') %>
+
+  <% end %>  
+  <% if  page == 'show_service' %>
+    <%= image_tag('/uploads/main2.jpg') %>
+
+  <% end %>  
+  <% if page == 'gallery' %>
+    <%= image_tag('new_logo2.jpg') %>
+  <% end %>
+<% else %>
+  <%= image_tag('new_logo1.jpg') %>
+<% end %>
+

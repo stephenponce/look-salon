@@ -313,7 +313,14 @@ ul.subheader>li{
 .sidebar a {
 	color: #BDBDBD;
 }
-
+.sidebar li.main_level a{
+	font-weight:bold;
+	color:red;
+}
+.sidebar li.sub_level a{
+	color: #2C4449;
+	font-style:italic;
+}
 /* Search */
 
 #searchform {

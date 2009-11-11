@@ -1,0 +1,25 @@
+- p1=posts[0]
+- p2=posts[1]
+.boxed
+  .bb_post
+    .bb_small_image
+      = image_tag 'small_1.jpg'
+    .bb_title
+      = p1.title[0,140] + '...'
+      .link_wrap
+        = image_tag 'arrow_small.jpg'
+        - if p1.body
+          = link_to 'more', :controller=>'info', :action=>'display_post'
+        - if p1.url
+          = link_to 'more', p.url
+  .bb_post
+    .bb_small_image
+      = image_tag 'small_2.jpg'
+    .bb_title
+      = p2.title[0,140] + '...'
+      .link_wrap
+        = image_tag 'arrow_small.jpg'
+        - if p2.body
+          = link_to 'more', :controller=>'info', :action=>'display_post'
+        - if p2.url
+          = link_to 'more', p.url

@@ -1,17 +1,17 @@
 #center
   .boxed
     %h1.heading
-      Photo Gallery 
-    %h3.heading
+      Image Library
+    %h4.teal
+      > Photo Gallery 
+      %br
       = link_to '+ Upload New Image', new_image_path
     %p
-      Use this tool to make LIVE updates to your Photo Gallery below. You can create, edit and delete photos from this panel. 
-      %p
-        %span.red
-          NOTE:
-        Any changes made here will be reflected on the live website.
+      %span.red
+        NOTE:
+      Any changes made here will be reflected on the live website.
     %h1.heading
-      Gallery Preview
+      Photo Gallery
 
     .gallery_wrapper
       - for image in @images

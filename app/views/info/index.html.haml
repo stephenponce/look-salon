@@ -1,0 +1,11 @@
+.welcome_message
+  %p
+    %b
+      Friends
+    %br/
+    %i
+      Enjoy your journey at the Look Salon. Discover the talent, creativity & achievements of our team. Your image is unique and individual. We understand that. At the Look Salon our team is excited to help you discover all the image possibilities that create your look.
+.post_module
+  = render(:partial=>'bulletin_board', :locals=>{:posts=>@posts})
+.preview_module
+  = render(:partial=>'gallery_preview', :locals=>{:main=>@main_image, :images=>@images})

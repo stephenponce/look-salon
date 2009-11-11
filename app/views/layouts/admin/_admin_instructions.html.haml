@@ -1,0 +1,13 @@
+-if current_page?(:controller=>'admin', :action=>'bulletin_board')
+  %li
+    The bulletin board allows you to manage your home page posts. 
+  %li
+    The home page can only display 2 items at a time. 
+-if current_page?(:controller=>'admin', :action=>'gallery')
+  %li
+    Use this tool to make LIVE updates to your Photo Gallery below. 
+  %li
+    You can create, edit and delete photos from this panel.
+- else
+  %p
+    hi

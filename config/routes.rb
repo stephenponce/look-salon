@@ -1,12 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :promos
-
 
 # A bunch of admin re-routing to the actual controllers
-  map.connect 'admin/', :controller=>'admin', :action=>'panel'
-  map.connect 'admin/home', :controller=>'admin', :action=>'panel'
-  map.connect 'admin/index', :controller=>'admin', :action=>'panel'
-  map.connect 'admin/panel', :controller=>'admin', :action=>'panel'
+  map.connect 'admin/', :controller=>'admin', :action=>'bulletin_board'
+  map.connect 'admin/home', :controller=>'admin', :action=>'bulletin_board'
+  map.connect 'admin/index', :controller=>'admin', :action=>'bulletin_board'
+  map.connect 'admin/bulletin_board', :controller=>'admin', :action=>'bulletin_board'
+
+  map.connect 'admin/promos', :controller=>'promos', :action=>'index'
+
   map.photo_gallery 'admin/gallery', :controller=>'images', :action=>'index'
   map.connect 'admin/stylists', :controller=>'stylists', :action=>'index'
   map.connect 'admin/services', :controller=>'services', :action=>'index'
@@ -28,6 +29,7 @@ ActionController::Routing::Routes.draw do |map|
   # end
 
 
+  map.resources :promos, :active_scaffold => true
 
   map.resources :tags, :active_scaffold => true
 
@@ -38,6 +40,12 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :images
 
   map.resources :stylists, :has_many=> :images
+
+  # Sample resource route within a namespace:
+  #   map.namespace :admin do |admin|
+  #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
+  #     admin.resources :products
+  #   end
 
   # The priority is based upon order of creation: first created -> highest priority.
 

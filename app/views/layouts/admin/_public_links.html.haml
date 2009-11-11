@@ -1,0 +1,25 @@
+-if current_page?(:controller=>'admin', :action=>'bulletin_board')
+  %ul
+    %li
+      %h2
+        LookSalonMN.com (Live Site)
+    %li
+      %ul.public_quick_links
+        %li
+          %b
+          PUBLIC PAGES
+        %li
+          = link_to 'Home Page', :controller=>'info', :action=>'index'
+        %li
+          = link_to 'Services Page', :controller=>'info', :action=>'services'
+        %li
+          = link_to 'Products Page', :controller=>'info', :action=>'products'
+          %li
+            = link_to 'Gallery', :controller=>'info', :action=>'gallery'
+- else
+  %ul
+    %li
+      %h2
+        LookSalonMN.com 
+      %ul
+        = render :partial=>"layouts/admin/admin_instructions"

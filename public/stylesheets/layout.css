@@ -85,7 +85,7 @@ ul#menu li a:hover{
 
 }
 #content{
-	float:right;
+//	float:right;
 	margin:5px;
 	margin-top:10px;
 	height:391px;
@@ -167,7 +167,8 @@ ul#menu li a:hover{
 		
 }
 h2.second{
-	color:#427785;
+	color:#872019; /* Red */
+/*teal	color:#427785; */
 	margin-left:5px;
 }
 h2.third{
@@ -214,7 +215,7 @@ ul.second_nav li a{
 //#AAAAAA
 //	border: 2px solid #1b1e1f;
 
-	color:#1B1E1F;
+	color:#2A373D;
 	font-variant:small-caps;
 	text-decoration:none;
 }
