@@ -5,3 +5,9 @@
     To schedule an appointment please call us at 952-746-7777.
     %br
     To learn more about the Look Salon, we welcome your visit!
+  .testimonials
+    - for t in @testimonials
+      .title
+        = t.title
+      .body
+        = t.body

@@ -1,4 +1,5 @@
 class ServicesController < ApplicationController
+  before_filter :login_required
   layout 'admin'
 
   active_scaffold :service do |config|

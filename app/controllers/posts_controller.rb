@@ -1,19 +1,13 @@
 class PostsController < ApplicationController
-  layout :choose_layout
-  active_scaffold :post
+  layout ' admin'
+  before_filter :login_required
 
-  def promos
-  end 
-
-  def show
-    @post = Post.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @post }
-    end
+  active_scaffold :post do |config|
+    config.columns = [:title, :body, :display, :url]
   end
-
+  def url
+    
+  end
 end
 class OldPostsController
   # GET /posts

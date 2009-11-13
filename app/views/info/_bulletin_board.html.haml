@@ -9,9 +9,7 @@
       .link_wrap
         = image_tag 'arrow_small.jpg'
         - if p1.body
-          = link_to 'more', :controller=>'info', :action=>'display_post'
-        - if p1.url
-          = link_to 'more', p.url
+          = link_to 'more', p1.url
   .bb_post
     .bb_small_image
       = image_tag 'small_2.jpg'
@@ -22,4 +20,4 @@
         - if p2.body
           = link_to 'more', :controller=>'info', :action=>'display_post'
         - if p2.url
-          = link_to 'more', p.url
+          = link_to 'more', p2.url

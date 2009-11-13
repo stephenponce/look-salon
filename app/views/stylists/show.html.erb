@@ -1,7 +1,11 @@
-<p>
-  <b>Professional Title:</b>
-  <%=h @stylist.professional_title %>
-</p>
+<h2 class='title'> 
+  <%=h @stylist.name %>
+</h2>
+<div class='stylist_links'>
+  <%= link_to 'Upload Image', :controller=>'images', :action=>'staff_profile' %> |
+  <%= link_to 'Edit Profile', edit_stylist_path(@stylist) %>
+</div>
+
 
 <p>
   <b>Name:</b>
@@ -9,13 +13,17 @@
 </p>
 
 <p>
+  <b>Professional Title:</b>
+  <%=h @stylist.professional_title %>
+</p>
+
+<p>
   <b>bio:</b>
   <%=h @stylist.bio %>
 </p>
 <p>
-  <b>Image</b>
+  <b>Profile Image</b>
+  --Functionality Coming Soon--
 </p>
+  <%= link_to '< Back', stylists_path %> 
 
-<%= link_to 'Upload Image', :controller=>'images', :action=>'staff_profile' %> |
-<%= link_to 'Edit', edit_stylist_path(@stylist) %> |
-<%= link_to 'Back', stylists_path %>

@@ -1,5 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-
 # A bunch of admin re-routing to the actual controllers
   map.connect 'admin/', :controller=>'admin', :action=>'bulletin_board'
   map.connect 'admin/home', :controller=>'admin', :action=>'bulletin_board'
@@ -36,6 +35,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :services, :active_scaffold => true
 
   map.resources :posts, :active_scaffold => true
+  map.resources :testimonials, :active_scaffold=>true
 
   map.resources :images
 

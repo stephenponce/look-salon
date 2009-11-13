@@ -204,3 +204,11 @@ table.service-wrapper th{
         padding-top:10px;
 }
 
+/* APPOINTMENTS */
+.testimonials{
+	margin-top:10px;
+	padding:10px;
+	border-bottom:2px dotted #1B1E1F;
+	border-top:1px dotted #1B1E1F;
+        font-style:italic;
+}

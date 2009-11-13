@@ -1,4 +1,6 @@
 class ImagesController < ApplicationController
+  before_filter :login_required
+
   layout :choose_layout
   active_scaffold :post
 

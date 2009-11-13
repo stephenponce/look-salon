@@ -1,0 +1,18 @@
+<p>
+  <b>Body:</b>
+  <%=h @testimonial.body %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @testimonial.title %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%=h @testimonial.active %>
+</p>
+
+
+<%= link_to 'Edit', edit_testimonial_path(@testimonial) %> |
+<%= link_to 'Back', testimonials_path %>

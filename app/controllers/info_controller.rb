@@ -58,5 +58,7 @@ class InfoController < ApplicationController
     @promos = Promo.find(:all, :conditions=>{:display_status => true},:limit=>4)
   end
 
-  
+  def appointments
+    @testimonials = Testimonial.find(:all, :conditions=>{:active=> true}, :limit=>3)
+  end  
 end

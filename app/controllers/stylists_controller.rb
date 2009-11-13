@@ -1,4 +1,6 @@
 class StylistsController < ApplicationController
+  before_filter :login_required
+
   layout :choose_layout
 
   # GET /stylists

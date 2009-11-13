@@ -8,6 +8,15 @@
     Use this tool to make LIVE updates to your Photo Gallery below. 
   %li
     You can create, edit and delete photos from this panel.
+- if current_page?(:controller=>'stylists', :action=>'show') || current_page?(:controller=>'stylists', :action=>'index')
+  %li
+    = link_to ' +New Profile', :controller=>'stylists', :action=>'new'
+  %li
+    = link_to ' > Staff Bios', :controller=>'stylists', :action=>'index'
+- if  current_page?(:controller=>'stylists', :action=>'index')
+  %li
+    = link_to ' +New Profile', :controller=>'stylists', :action=>'new'
+  %li
+    = link_to ' Staff Photos', :controller=>'stylists', :action=>'index'
 - else
   %p
-    hi
