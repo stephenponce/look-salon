@@ -18,6 +18,4 @@
       .link_wrap
         = image_tag 'arrow_small.jpg'
         - if p2.body
-          = link_to 'more', :controller=>'info', :action=>'display_post'
-        - if p2.url
           = link_to 'more', p2.url

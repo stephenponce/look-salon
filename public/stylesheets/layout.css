@@ -106,7 +106,9 @@ ul#menu li a:hover{
 	min-height:100px;
 	margin-bottom:1px;
 }
-
+#bg_logo{
+	float:left;
+}
 #top_left{
 //	background-image:url('/images/top_bgrd.jpg');
 //	background-repeat:no-repeat;
@@ -163,8 +165,7 @@ ul#menu li a:hover{
 }
 #top_right .header{
 	letter-spacing:4px;
-	color:#1B1E1F;
-		
+	color:#2A373D;
 }
 h2.second{
 	color:#872019; /* Red */
@@ -210,12 +211,10 @@ ul.second_nav li{
 }
 ul.second_nav li#current a{ 
 	color:#872019;
+	text-decoration:underline;
 }
 ul.second_nav li a{
-//#AAAAAA
-//	border: 2px solid #1b1e1f;
-
-	color:#2A373D;
+	color:#427785;
 	font-variant:small-caps;
 	text-decoration:none;
 }

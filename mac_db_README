@@ -1,0 +1,26 @@
+On reboot - to setup database:
+	1) Ensure all instances of mysql are NOT running
+	2) Ensure the config/database.yaml file is 
+development:
+  adapter: mysql
+  encoding: utf8
+  database: looksalondevelopment
+  username: root
+  socket: /Applications/MAMP/tmp/mysql/mysql.sock
+  username: root
+  password: password
+
+	3) Turn on MAMP instance of Mysql
+	4) all good to go!!!
+
+Migrating Development Data to Pre-prod
+> cd /Applications/MAMP/bin
+-- List of ALL Commands -
+>  mysqldump5 --help
+-- Three Different Usage Patterns --
+--- 1) mysqldump [options] db_name [tables]
+--- 2) mysqldump [options] --databases db_name1 [db_name2 db_name3...]
+--- 3) mysqldump [options] --all-databases
+
+> ./mysqldump5 -u root -p password
+>  mysqldump --user root --password=password looksalondevelopment > ~/Desktop/looksalon_dump.sql
