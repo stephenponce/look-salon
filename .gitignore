@@ -1,1 +1,7 @@
-log/*.log
+log/development.log
+log/production.log
+log/test.log
+log/*
+tmp/*
+vendor/*.log
+mac-specific/*
