@@ -78,6 +78,7 @@ table#small_preview td{
 }
 img.gallery{
 	color:#0D0E10;
+	border:1px solid #aaaaaa;
 }
 
 /* ABOUT US PAGE */
