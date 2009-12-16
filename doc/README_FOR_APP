@@ -1,5 +1,23 @@
-To build the guides:
+========== LOOK SALON README =============
+Status Report
+	> Date: 12/16/2009
+	> Created by: SSP
+	> Domain Name: http://thelooksalonmn.com
+	> Recent News:
+		1) Created DNS Records for looksalonmn.com [login to the slicehost.com for more details]
+			- A Records 
+			- NS Records
+		2) Web App Updates
+			- Logo Changes: Standardization onto Gradient bckgrd, both small/large logos
+			- Main Menu: Navigation & design updates to include on-hover effects, new images for each button
+			- Sub Menu : Design (CSS) updates to improve readablity
+			- CSS/Design: color palette for menu, logo & overall design integration
+	> Next Steps:
+		1) Manage changes through git repository
+		2) Establish Git-based workflow to support server hosting & remote development
+			- include support for integration with any future developers  
+		3) From server pull/merge codebase with stable version
 
-* Install source-highlighter (http://www.gnu.org/software/src-highlite/source-highlight.html)
-* Install the mizuho gem (http://github.com/FooBarWidget/mizuho/tree/master)
-* Run `rake guides` from the railties directory
+
+========== END OF README ===============
+> for more info please contact me at stephenponce@gmail.com or via phone 612-217-1691
